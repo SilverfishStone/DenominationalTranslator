@@ -1,0 +1,1388 @@
+{
+  "trinity": {
+    "name": "Trinity",
+    "terms": {
+      "catholic": ["Trinity", "Holy Trinity", "one God in three persons"],
+      "ortho": ["Holy Trinity", "Trinity", "tri-hypostatic God"],
+      "oriental_ortho": ["Holy Trinity", "Trinity"],
+      "protestant": ["Trinity", "triune God", "one God three persons"],
+      "lds": ["Godhead", "Father Son and Holy Ghost", "three distinct beings"],
+      "oneness_pentecostal": ["Oneness", "manifestations of God", "Jesus name theology"],
+      "jehovahs_witnesses": ["identity of God", "Trinity doctrine"],
+      "unitarian": ["unity of God", "one God the Father"],
+      "iglesia_ni_cristo": ["one God the Father"],
+      "christadelphian": ["God is one", "no Trinity"]
+    }
+  },
+  "father": {
+    "name": "God the Father",
+    "terms": {
+      "catholic": ["God the Father", "First Person"],
+      "ortho": ["God the Father", "unoriginate Father"],
+      "protestant": ["God the Father", "Heavenly Father"],
+      "lds": ["Heavenly Father", "Elohim"],
+      "jehovahs_witnesses": ["Jehovah", "the Father"],
+      "oneness_pentecostal": ["Father as a title", "God in fatherhood"]
+    }
+  },
+  "holy_spirit": {
+    "name": "Holy Spirit",
+    "terms": {
+      "catholic": ["Holy Spirit", "Third Person", "Paraclete"],
+      "ortho": ["Holy Spirit"],
+      "protestant": ["Holy Spirit", "Holy Ghost"],
+      "lds": ["Holy Ghost", "Gift of the Holy Ghost"],
+      "pentecostal": ["Holy Spirit", "Holy Ghost"],
+      "jehovahs_witnesses": ["holy spirit", "God's active force"],
+      "oneness_pentecostal": ["Holy Ghost", "Spirit of God"]
+    }
+  },
+  "filioque": {
+    "name": "Procession of the Spirit",
+    "terms": {
+      "catholic": ["Filioque", "proceeds from the Father and the Son"],
+      "ortho": ["procession from the Father", "Filioque"],
+      "oriental_ortho": ["procession from the Father", "Filioque"],
+      "protestant": ["Filioque", "procession of the Spirit"]
+    }
+  },
+  "essence_and_energies": {
+    "name": "Essence and energies",
+    "terms": {
+      "ortho": ["essence and energies", "divine energies", "uncreated light"],
+      "catholic": ["divine essence", "created grace"],
+      "oriental_ortho": ["divine nature and operations"]
+    }
+  },
+  "name_of_god": {
+    "name": "Name of God",
+    "terms": {
+      "jehovahs_witnesses": ["Jehovah", "the divine name", "Tetragrammaton"],
+      "lds": ["names of God", "Elohim", "Jehovah as the Son"],
+      "messianic": ["Hashem", "YHVH", "Yeshua"],
+      "oneness_pentecostal": ["the name of Jesus", "Jesus' name"]
+    }
+  },
+  "incarnation": {
+    "name": "Incarnation",
+    "terms": {
+      "catholic": ["Incarnation", "Word made flesh"],
+      "ortho": ["Incarnation", "enfleshment of the Word"],
+      "oriental_ortho": ["Incarnation"],
+      "protestant": ["Incarnation", "God became man"],
+      "lds": ["Christ's mortal birth", "Incarnation"],
+      "christian_science": ["Christ and Jesus"]
+    }
+  },
+  "natures_of_christ": {
+    "name": "Natures of Christ",
+    "terms": {
+      "catholic": ["two natures", "hypostatic union", "Chalcedon"],
+      "ortho": ["two natures", "hypostatic union", "Chalcedon"],
+      "oriental_ortho": ["one incarnate nature", "miaphysite"],
+      "church_of_the_east": ["two natures two qnome", "dyophysite"],
+      "protestant": ["two natures", "fully God and fully man"],
+      "lds": ["divine and mortal natures of Christ"],
+      "jehovahs_witnesses": ["Jesus as created Son"],
+      "oneness_pentecostal": ["God manifest in flesh"]
+    }
+  },
+  "virgin_birth": {
+    "name": "Virgin birth",
+    "terms": {
+      "catholic": ["virgin birth", "virginal conception"],
+      "ortho": ["virgin birth"],
+      "protestant": ["virgin birth", "born of a virgin"],
+      "lds": ["virgin birth"]
+    }
+  },
+  "preexistence_of_christ": {
+    "name": "Preexistence of Christ",
+    "terms": {
+      "catholic": ["eternal Son", "preexistence of the Word"],
+      "ortho": ["eternal generation", "begotten before all ages"],
+      "protestant": ["eternal Son", "preexistent Christ"],
+      "lds": ["premortal Christ", "Jehovah in the premortal life"],
+      "jehovahs_witnesses": ["Jesus as first creation", "Michael"],
+      "christadelphian": ["Christ came into being at birth"]
+    }
+  },
+  "atonement": {
+    "name": "Atonement",
+    "terms": {
+      "catholic": ["atonement", "redemption", "satisfaction"],
+      "ortho": ["atonement", "Christus Victor", "redemption"],
+      "protestant": ["atonement", "penal substitution", "the cross"],
+      "reformed": ["penal substitution", "limited atonement"],
+      "lds": ["Atonement of Jesus Christ", "Gethsemane and the cross"],
+      "christian_science": ["atonement as at-one-ment"]
+    }
+  },
+  "resurrection_of_christ": {
+    "name": "Resurrection of Christ",
+    "terms": {
+      "catholic": ["Resurrection", "risen Lord"],
+      "ortho": ["Resurrection", "Pascha"],
+      "protestant": ["resurrection of Jesus", "empty tomb"],
+      "lds": ["resurrection of Christ"]
+    }
+  },
+  "ascension": {
+    "name": "Ascension",
+    "terms": {
+      "catholic": ["Ascension"],
+      "ortho": ["Ascension"],
+      "protestant": ["ascension of Christ"],
+      "lds": ["ascension"]
+    }
+  },
+  "offices_of_christ": {
+    "name": "Offices of Christ",
+    "terms": {
+      "protestant": ["prophet priest and king", "threefold office"],
+      "reformed": ["munus triplex", "offices of Christ"],
+      "lds": ["roles of Christ"]
+    }
+  },
+  "gifts_of_the_spirit": {
+    "name": "Gifts of the Spirit",
+    "terms": {
+      "catholic": ["charisms", "gifts of the Holy Spirit"],
+      "ortho": ["charismata", "gifts of the Spirit"],
+      "protestant": ["spiritual gifts"],
+      "pentecostal": ["gifts of the Spirit", "nine gifts"],
+      "lds": ["gifts of the Spirit"]
+    }
+  },
+  "baptism_in_the_spirit": {
+    "name": "Baptism in the Holy Spirit",
+    "terms": {
+      "pentecostal": ["baptism in the Holy Spirit", "Spirit baptism", "infilling"],
+      "holiness": ["entire sanctification", "second blessing"],
+      "catholic": ["baptism in the Spirit", "charismatic renewal"],
+      "evangelical": ["filling of the Spirit"],
+      "oneness_pentecostal": ["Holy Ghost baptism", "evidence of tongues"],
+      "lds": ["baptism of fire and of the Holy Ghost"]
+    }
+  },
+  "tongues": {
+    "name": "Speaking in tongues",
+    "terms": {
+      "pentecostal": ["speaking in tongues", "glossolalia", "initial evidence"],
+      "oneness_pentecostal": ["tongues as evidence"],
+      "catholic": ["gift of tongues"],
+      "protestant": ["tongues", "gift of languages"],
+      "reformed": ["cessation of tongues"]
+    }
+  },
+  "continuationism": {
+    "name": "Continuation of sign gifts",
+    "terms": {
+      "pentecostal": ["continuationism", "gifts for today"],
+      "reformed": ["cessationism", "sign gifts ceased"],
+      "reformed_baptist": ["cessationism"],
+      "catholic": ["charisms continue"],
+      "evangelical": ["sign gifts", "charismatic question"]
+    }
+  },
+  "justification": {
+    "name": "Justification",
+    "terms": {
+      "catholic": ["justification", "made righteous", "infused righteousness"],
+      "ortho": ["justification", "being made righteous"],
+      "protestant": ["justification", "declared righteous", "imputed righteousness"],
+      "reformed": ["justification by faith alone", "forensic justification"],
+      "lds": ["justification"]
+    }
+  },
+  "sanctification": {
+    "name": "Sanctification",
+    "terms": {
+      "catholic": ["sanctification", "growth in holiness"],
+      "ortho": ["sanctification"],
+      "protestant": ["sanctification", "being made holy"],
+      "holiness": ["entire sanctification", "Christian perfection"],
+      "methodist": ["Christian perfection", "going on to perfection"],
+      "lds": ["sanctification"]
+    }
+  },
+  "glorification": {
+    "name": "Glorification",
+    "terms": {
+      "protestant": ["glorification", "final redemption"],
+      "catholic": ["glorification", "beatific vision"],
+      "lds": ["exaltation", "eternal life", "celestial glory"]
+    }
+  },
+  "theosis": {
+    "name": "Deification",
+    "terms": {
+      "ortho": ["theosis", "deification", "becoming partakers of the divine nature"],
+      "oriental_ortho": ["theosis", "deification"],
+      "catholic": ["divinization", "partakers of the divine nature"],
+      "lds": ["exaltation", "become like God"],
+      "protestant": ["union with Christ", "deification"]
+    }
+  },
+  "grace": {
+    "name": "Grace",
+    "terms": {
+      "catholic": ["grace", "sanctifying grace", "actual grace"],
+      "ortho": ["grace", "uncreated grace", "divine energies"],
+      "protestant": ["grace", "unmerited favor"],
+      "reformed": ["sovereign grace"],
+      "lds": ["grace", "after all we can do"]
+    }
+  },
+  "faith_and_works": {
+    "name": "Faith and works",
+    "terms": {
+      "catholic": ["faith working through love", "faith and works"],
+      "ortho": ["faith and works", "synergy"],
+      "protestant": ["faith alone", "sola fide", "faith and works"],
+      "lds": ["faith and works", "endure to the end"],
+      "churches_of_christ": ["obedient faith", "faith and baptism"]
+    }
+  },
+  "predestination": {
+    "name": "Predestination",
+    "terms": {
+      "reformed": ["predestination", "unconditional election"],
+      "catholic": ["predestination", "predestination to glory"],
+      "ortho": ["foreknowledge", "predestination"],
+      "methodist": ["prevenient grace", "conditional election"],
+      "protestant": ["predestination"]
+    }
+  },
+  "election": {
+    "name": "Election",
+    "terms": {
+      "reformed": ["election", "the elect"],
+      "protestant": ["election"],
+      "catholic": ["election"],
+      "lds": ["foreordination", "election"]
+    }
+  },
+  "perseverance": {
+    "name": "Perseverance",
+    "terms": {
+      "reformed": ["perseverance of the saints"],
+      "evangelical": ["once saved always saved", "eternal security"],
+      "baptist": ["eternal security", "once saved always saved"],
+      "catholic": ["gift of perseverance", "mortal sin"],
+      "methodist": ["falling from grace"],
+      "lds": ["endure to the end"]
+    }
+  },
+  "assurance": {
+    "name": "Assurance of salvation",
+    "terms": {
+      "evangelical": ["assurance", "knowing you are saved"],
+      "reformed": ["assurance of faith"],
+      "catholic": ["certainty of salvation", "hope of salvation"],
+      "ortho": ["assurance"]
+    }
+  },
+  "repentance": {
+    "name": "Repentance",
+    "terms": {
+      "catholic": ["repentance", "contrition"],
+      "ortho": ["repentance", "metanoia"],
+      "protestant": ["repentance"],
+      "lds": ["repentance"],
+      "oneness_pentecostal": ["repentance"]
+    }
+  },
+  "means_of_grace": {
+    "name": "Means of grace",
+    "terms": {
+      "lutheran": ["means of grace", "Word and sacrament"],
+      "methodist": ["means of grace"],
+      "catholic": ["sacraments as means of grace"],
+      "protestant": ["means of grace"],
+      "reformed": ["means of grace"]
+    }
+  },
+  "original_sin": {
+    "name": "Original sin",
+    "terms": {
+      "catholic": ["original sin"],
+      "ortho": ["ancestral sin", "fall"],
+      "oriental_ortho": ["ancestral sin", "fall"],
+      "protestant": ["original sin"],
+      "reformed": ["original sin", "federal headship"],
+      "lds": ["the Fall", "Adam's transgression"]
+    }
+  },
+  "human_nature": {
+    "name": "Human nature",
+    "terms": {
+      "catholic": ["human nature", "wounded nature"],
+      "ortho": ["human nature", "image and likeness"],
+      "protestant": ["human nature", "fallen nature"],
+      "lds": ["natural man", "human nature"]
+    }
+  },
+  "image_of_god": {
+    "name": "Image of God",
+    "terms": {
+      "catholic": ["image of God", "imago Dei"],
+      "ortho": ["image and likeness"],
+      "protestant": ["image of God", "imago Dei"],
+      "lds": ["image of God", "spirit children"]
+    }
+  },
+  "free_will": {
+    "name": "Free will",
+    "terms": {
+      "catholic": ["free will"],
+      "ortho": ["free will", "synergy"],
+      "protestant": ["free will"],
+      "reformed": ["bondage of the will", "free agency"],
+      "methodist": ["free will", "prevenient grace"],
+      "lds": ["agency", "free agency"]
+    }
+  },
+  "mortal_and_venial_sin": {
+    "name": "Mortal and venial sin",
+    "terms": {
+      "catholic": ["mortal sin", "venial sin"],
+      "ortho": ["sin", "passions"],
+      "protestant": ["sin", "willful sin"]
+    }
+  },
+  "total_depravity": {
+    "name": "Total depravity",
+    "terms": {
+      "reformed": ["total depravity", "total inability"],
+      "protestant": ["fallenness", "inability"],
+      "catholic": ["wounded nature", "concupiscence"],
+      "ortho": ["corruption of nature", "not total depravity"]
+    }
+  },
+  "scripture": {
+    "name": "Scripture",
+    "terms": {
+      "catholic": ["Sacred Scripture", "the Bible"],
+      "ortho": ["Holy Scripture", "the Bible"],
+      "protestant": ["the Bible", "Scripture", "Word of God"],
+      "lds": ["standard works", "Scripture"],
+      "christian_science": ["Bible and Science and Health"]
+    }
+  },
+  "canon": {
+    "name": "Biblical canon",
+    "terms": {
+      "catholic": ["canon of Scripture", "deuterocanonical books"],
+      "ortho": ["canon", "anagignoskomena"],
+      "oriental_ortho": ["canon"],
+      "protestant": ["canon", "sixty-six books"],
+      "lds": ["open canon", "standard works"]
+    }
+  },
+  "sola_scriptura": {
+    "name": "Scripture and other authorities",
+    "terms": {
+      "protestant": ["sola scriptura", "Scripture alone"],
+      "reformed": ["sola scriptura"],
+      "lutheran": ["sola scriptura"],
+      "catholic": ["Scripture and Tradition"],
+      "ortho": ["Scripture and Holy Tradition"],
+      "anglican": ["Scripture tradition reason"]
+    }
+  },
+  "inspiration": {
+    "name": "Inspiration of Scripture",
+    "terms": {
+      "catholic": ["inspiration", "God-breathed"],
+      "ortho": ["inspiration"],
+      "protestant": ["inspiration", "verbal inspiration"],
+      "lds": ["inspired Scripture"]
+    }
+  },
+  "inerrancy": {
+    "name": "Inerrancy",
+    "terms": {
+      "evangelical": ["inerrancy", "infallibility of Scripture"],
+      "protestant": ["infallibility of Scripture"],
+      "catholic": ["inerrancy", "inerrancy of Scripture"],
+      "ortho": ["truth of Scripture"]
+    }
+  },
+  "apocrypha": {
+    "name": "Deuterocanonical books",
+    "terms": {
+      "catholic": ["deuterocanonical books", "Apocrypha"],
+      "ortho": ["deuterocanonical books", "anagignoskomena"],
+      "protestant": ["Apocrypha", "deuterocanonical books"],
+      "anglican": ["Apocrypha"]
+    }
+  },
+  "open_canon": {
+    "name": "Open or closed canon",
+    "terms": {
+      "lds": ["open canon", "additional scripture", "Book of Mormon"],
+      "community_of_christ": ["open canon", "Book of Mormon"],
+      "protestant": ["closed canon"],
+      "catholic": ["closed canon"],
+      "seventh_day_adventist": ["Spirit of Prophecy", "Ellen White writings"]
+    }
+  },
+  "continuing_revelation": {
+    "name": "Continuing revelation",
+    "terms": {
+      "lds": ["continuing revelation", "living prophets"],
+      "seventh_day_adventist": ["Spirit of Prophecy", "prophetic gift"],
+      "new_apostolic": ["continuing apostleship"],
+      "pentecostal": ["prophecy today"],
+      "protestant": ["closed revelation", "sufficiency of Scripture"],
+      "catholic": ["public revelation ended", "private revelation"]
+    }
+  },
+  "hermeneutics": {
+    "name": "Interpretation of Scripture",
+    "terms": {
+      "catholic": ["interpretation of Scripture", "magisterium"],
+      "ortho": ["interpretation in the Church"],
+      "protestant": ["hermeneutics", "private interpretation"],
+      "reformed": ["analogy of faith"]
+    }
+  },
+  "tradition": {
+    "name": "Tradition",
+    "terms": {
+      "catholic": ["Sacred Tradition", "Apostolic Tradition"],
+      "ortho": ["Holy Tradition"],
+      "oriental_ortho": ["Holy Tradition"],
+      "protestant": ["tradition"],
+      "anglican": ["tradition"]
+    }
+  },
+  "magisterium": {
+    "name": "Teaching authority",
+    "terms": {
+      "catholic": ["Magisterium", "teaching office"],
+      "ortho": ["mind of the Church", "consensus of the Fathers"],
+      "protestant": ["teaching authority"]
+    }
+  },
+  "papal_primacy": {
+    "name": "Papal primacy",
+    "terms": {
+      "catholic": ["papal primacy", "Petrine ministry", "pope"],
+      "ortho": ["primacy of honor", "papal claims"],
+      "oriental_ortho": ["papal primacy"],
+      "protestant": ["papacy", "bishop of Rome"],
+      "old_catholic": ["papal primacy"]
+    }
+  },
+  "papal_infallibility": {
+    "name": "Papal infallibility",
+    "terms": {
+      "catholic": ["papal infallibility", "ex cathedra"],
+      "ortho": ["infallibility of the Church"],
+      "protestant": ["papal infallibility"],
+      "old_catholic": ["rejection of papal infallibility"]
+    }
+  },
+  "ecumenical_councils": {
+    "name": "Ecumenical councils",
+    "terms": {
+      "catholic": ["ecumenical councils", "twenty-one councils"],
+      "ortho": ["seven ecumenical councils"],
+      "oriental_ortho": ["three ecumenical councils"],
+      "church_of_the_east": ["first two councils"],
+      "protestant": ["early councils", "ecumenical councils"]
+    }
+  },
+  "apostolic_succession": {
+    "name": "Apostolic succession",
+    "terms": {
+      "catholic": ["apostolic succession"],
+      "ortho": ["apostolic succession"],
+      "oriental_ortho": ["apostolic succession"],
+      "anglican": ["apostolic succession"],
+      "protestant": ["apostolic succession"],
+      "lds": ["priesthood succession", "apostolic authority"]
+    }
+  },
+  "prophetic_authority": {
+    "name": "Prophetic authority",
+    "terms": {
+      "lds": ["living prophet", "President of the Church"],
+      "seventh_day_adventist": ["Spirit of Prophecy", "Ellen G. White"],
+      "new_apostolic": ["Chief Apostle"],
+      "pentecostal": ["office of prophet"]
+    }
+  },
+  "priesthood_authority": {
+    "name": "Priesthood authority",
+    "terms": {
+      "lds": ["priesthood keys", "Aaronic and Melchizedek"],
+      "catholic": ["sacred power", "Holy Orders"],
+      "ortho": ["priesthood"],
+      "protestant": ["ministerial authority"]
+    }
+  },
+  "church": {
+    "name": "The church",
+    "terms": {
+      "catholic": ["the Church", "Mystical Body"],
+      "ortho": ["the Church", "the Church as communion"],
+      "protestant": ["the church", "body of Christ"],
+      "lds": ["the Church", "true church"],
+      "restorationist": ["the church", "New Testament church"]
+    }
+  },
+  "one_true_church": {
+    "name": "One true church",
+    "terms": {
+      "catholic": ["subsists in the Catholic Church", "one true Church"],
+      "ortho": ["the Orthodox Church", "one holy catholic apostolic"],
+      "lds": ["only true and living church"],
+      "iglesia_ni_cristo": ["the Church of Christ"],
+      "churches_of_christ": ["the church of Christ"],
+      "protestant": ["invisible church", "true church"]
+    }
+  },
+  "great_apostasy": {
+    "name": "Great apostasy",
+    "terms": {
+      "lds": ["Great Apostasy"],
+      "restorationist": ["apostasy", "falling away"],
+      "jehovahs_witnesses": ["great apostasy"],
+      "adventist": ["falling away"],
+      "catholic": ["indefectibility of the Church"],
+      "ortho": ["the Church did not fail"]
+    }
+  },
+  "marks_of_the_church": {
+    "name": "Marks of the church",
+    "terms": {
+      "catholic": ["four marks", "one holy catholic apostolic"],
+      "ortho": ["four marks"],
+      "protestant": ["marks of the church", "Word and sacrament"]
+    }
+  },
+  "visible_and_invisible_church": {
+    "name": "Visible and invisible church",
+    "terms": {
+      "protestant": ["invisible church", "visible church"],
+      "reformed": ["visible and invisible church"],
+      "catholic": ["visible Church"],
+      "ortho": ["the Church is visible"]
+    }
+  },
+  "polity": {
+    "name": "Church government",
+    "terms": {
+      "catholic": ["episcopal polity", "hierarchy"],
+      "ortho": ["conciliarity", "synodality"],
+      "anglican": ["episcopal polity"],
+      "presbyterian": ["presbyterian polity", "elders"],
+      "congregational": ["congregational polity"],
+      "baptist": ["congregational government"],
+      "protestant": ["church government", "polity"]
+    }
+  },
+  "local_church": {
+    "name": "Local church",
+    "terms": {
+      "baptist": ["local church", "autonomous congregation"],
+      "churches_of_christ": ["local congregation"],
+      "protestant": ["local church"],
+      "catholic": ["parish"]
+    }
+  },
+  "church_discipline": {
+    "name": "Church discipline",
+    "terms": {
+      "protestant": ["church discipline", "excommunication"],
+      "anabaptist": ["the ban", "shunning"],
+      "amish": ["shunning", "Meidung"],
+      "catholic": ["excommunication", "canonical penalties"],
+      "lds": ["membership council", "excommunication"]
+    }
+  },
+  "ecumenism": {
+    "name": "Ecumenism",
+    "terms": {
+      "catholic": ["ecumenism", "separated brethren"],
+      "ortho": ["ecumenism"],
+      "protestant": ["ecumenism", "Christian unity"],
+      "evangelical": ["cooperation", "ecumenism"]
+    }
+  },
+  "schism": {
+    "name": "Schism",
+    "terms": {
+      "catholic": ["schism"],
+      "ortho": ["schism"],
+      "protestant": ["schism", "division"]
+    }
+  },
+  "restoration": {
+    "name": "Restoration of the church",
+    "terms": {
+      "restorationist": ["restoration", "restore the New Testament church"],
+      "lds": ["Restoration"],
+      "churches_of_christ": ["restoration"],
+      "adventist": ["remnant"]
+    }
+  },
+  "ordination": {
+    "name": "Ordination",
+    "terms": {
+      "catholic": ["ordination", "Holy Orders"],
+      "ortho": ["ordination", "cheirotonia"],
+      "protestant": ["ordination"],
+      "baptist": ["ordination"],
+      "lds": ["ordination", "setting apart"]
+    }
+  },
+  "priesthood": {
+    "name": "Priesthood",
+    "terms": {
+      "catholic": ["ministerial priesthood", "common priesthood"],
+      "ortho": ["priesthood"],
+      "lds": ["priesthood", "Aaronic priesthood", "Melchizedek priesthood"],
+      "protestant": ["priesthood of all believers"]
+    }
+  },
+  "episcopacy": {
+    "name": "Bishops",
+    "terms": {
+      "catholic": ["bishop", "episcopacy"],
+      "ortho": ["bishop", "episkopos"],
+      "anglican": ["bishop"],
+      "methodist": ["bishop"],
+      "protestant": ["bishop", "overseer"]
+    }
+  },
+  "elders": {
+    "name": "Elders",
+    "terms": {
+      "presbyterian": ["elder", "ruling elder", "teaching elder"],
+      "reformed": ["elders"],
+      "baptist": ["elders", "pastors"],
+      "lds": ["elder"],
+      "protestant": ["elders"]
+    }
+  },
+  "deacons": {
+    "name": "Deacons",
+    "terms": {
+      "catholic": ["deacon", "permanent diaconate"],
+      "ortho": ["deacon"],
+      "protestant": ["deacon"],
+      "baptist": ["deacons"],
+      "lds": ["deacon"]
+    }
+  },
+  "papacy": {
+    "name": "The papacy",
+    "terms": {
+      "catholic": ["the Pope", "Supreme Pontiff", "Bishop of Rome"],
+      "ortho": ["Pope of Rome", "Bishop of Rome"],
+      "protestant": ["the Pope", "papacy"]
+    }
+  },
+  "priesthood_of_believers": {
+    "name": "Priesthood of believers",
+    "terms": {
+      "protestant": ["priesthood of all believers"],
+      "baptist": ["soul competency", "priesthood of believers"],
+      "catholic": ["common priesthood of the faithful"],
+      "lds": ["general priesthood"]
+    }
+  },
+  "clerical_celibacy": {
+    "name": "Clerical celibacy",
+    "terms": {
+      "catholic": ["clerical celibacy", "celibate priesthood"],
+      "eastern_catholic": ["married clergy", "celibate bishops"],
+      "ortho": ["married parish clergy", "monastic bishops"],
+      "protestant": ["married clergy"]
+    }
+  },
+  "apostles_today": {
+    "name": "Apostles today",
+    "terms": {
+      "lds": ["Quorum of the Twelve Apostles", "living apostles"],
+      "new_apostolic": ["apostles"],
+      "pentecostal": ["fivefold ministry", "apostles today"],
+      "protestant": ["apostolic age ended"]
+    }
+  },
+  "baptism": {
+    "name": "Baptism",
+    "terms": {
+      "catholic": ["Baptism", "sacrament of Baptism"],
+      "ortho": ["Baptism", "holy baptism"],
+      "protestant": ["baptism"],
+      "baptist": ["believer's baptism", "immersion"],
+      "lds": ["baptism", "baptism by immersion"],
+      "oneness_pentecostal": ["baptism in Jesus' name"],
+      "churches_of_christ": ["baptism for the remission of sins"]
+    }
+  },
+  "infant_baptism": {
+    "name": "Infant baptism",
+    "terms": {
+      "catholic": ["infant baptism", "baptism of infants"],
+      "ortho": ["infant baptism"],
+      "lutheran": ["infant baptism"],
+      "reformed": ["infant baptism", "covenant baptism"],
+      "baptist": ["believer's baptism only", "credobaptism"],
+      "anabaptist": ["believer's baptism"]
+    }
+  },
+  "mode_of_baptism": {
+    "name": "Mode of baptism",
+    "terms": {
+      "baptist": ["immersion"],
+      "ortho": ["triple immersion"],
+      "catholic": ["pouring or immersion"],
+      "protestant": ["mode of baptism"],
+      "oneness_pentecostal": ["immersion in Jesus' name"]
+    }
+  },
+  "confirmation": {
+    "name": "Confirmation and chrismation",
+    "terms": {
+      "catholic": ["Confirmation"],
+      "ortho": ["Chrismation"],
+      "oriental_ortho": ["Chrismation"],
+      "anglican": ["Confirmation"],
+      "lutheran": ["Confirmation"],
+      "protestant": ["confirmation"]
+    }
+  },
+  "confession": {
+    "name": "Confession of sins",
+    "terms": {
+      "catholic": ["Reconciliation", "Confession", "Penance"],
+      "ortho": ["Confession", "Mystery of Repentance"],
+      "protestant": ["confession of sins"],
+      "anglican": ["confession"]
+    }
+  },
+  "anointing_of_the_sick": {
+    "name": "Anointing of the sick",
+    "terms": {
+      "catholic": ["Anointing of the Sick", "Extreme Unction"],
+      "ortho": ["Holy Unction"],
+      "protestant": ["anointing the sick"],
+      "pentecostal": ["anointing with oil"]
+    }
+  },
+  "holy_orders": {
+    "name": "Holy orders",
+    "terms": {
+      "catholic": ["Holy Orders"],
+      "ortho": ["Holy Orders"],
+      "anglican": ["Holy Orders"],
+      "protestant": ["ordination"]
+    }
+  },
+  "matrimony": {
+    "name": "Marriage as a church rite",
+    "terms": {
+      "catholic": ["Matrimony", "sacrament of marriage"],
+      "ortho": ["Mystery of Marriage", "crowning"],
+      "protestant": ["Christian marriage"],
+      "lds": ["temple marriage", "sealing"]
+    }
+  },
+  "sacraments": {
+    "name": "Sacraments or ordinances",
+    "terms": {
+      "catholic": ["sacraments", "seven sacraments"],
+      "ortho": ["Holy Mysteries"],
+      "protestant": ["sacraments", "ordinances"],
+      "baptist": ["ordinances"],
+      "lds": ["ordinances", "saving ordinances"]
+    }
+  },
+  "real_presence": {
+    "name": "Presence of Christ in communion",
+    "terms": {
+      "catholic": ["Real Presence", "transubstantiation"],
+      "ortho": ["Real Presence", "change of the gifts"],
+      "lutheran": ["sacramental union", "Real Presence"],
+      "reformed": ["spiritual presence"],
+      "baptist": ["memorial", "symbolic presence"],
+      "protestant": ["Lord's Supper presence"]
+    }
+  },
+  "eucharistic_sacrifice": {
+    "name": "Eucharistic sacrifice",
+    "terms": {
+      "catholic": ["sacrifice of the Mass", "Eucharistic sacrifice"],
+      "ortho": ["bloodless sacrifice", "Divine Liturgy"],
+      "protestant": ["memorial of the sacrifice"],
+      "lutheran": ["sacrifice of praise"]
+    }
+  },
+  "closed_communion": {
+    "name": "Who may receive communion",
+    "terms": {
+      "catholic": ["closed communion", "communion in the Catholic Church"],
+      "ortho": ["closed communion"],
+      "lutheran": ["closed communion", "altar fellowship"],
+      "baptist": ["close communion"],
+      "protestant": ["open communion"]
+    }
+  },
+  "foot_washing": {
+    "name": "Foot washing",
+    "terms": {
+      "adventist": ["ordinance of humility", "foot washing"],
+      "anabaptist": ["foot washing"],
+      "oneness_pentecostal": ["foot washing"],
+      "catholic": ["mandatum"]
+    }
+  },
+  "temples": {
+    "name": "Temples",
+    "terms": {
+      "lds": ["temple", "temple ordinances", "endowment"],
+      "community_of_christ": ["temple"],
+      "protestant": ["the body as temple"],
+      "catholic": ["church building", "temple"]
+    }
+  },
+  "liturgy": {
+    "name": "Liturgy",
+    "terms": {
+      "catholic": ["liturgy", "Mass", "Roman Rite"],
+      "ortho": ["Divine Liturgy"],
+      "oriental_ortho": ["Divine Liturgy", "Holy Qurbana"],
+      "anglican": ["Book of Common Prayer", "liturgy"],
+      "lutheran": ["liturgy", "Divine Service"],
+      "protestant": ["worship service", "order of worship"],
+      "quaker": ["waiting worship", "silent meeting"]
+    }
+  },
+  "prayer": {
+    "name": "Prayer",
+    "terms": {
+      "catholic": ["prayer"],
+      "ortho": ["prayer", "noetic prayer"],
+      "protestant": ["prayer"],
+      "lds": ["prayer"]
+    }
+  },
+  "liturgical_calendar": {
+    "name": "Liturgical calendar",
+    "terms": {
+      "catholic": ["liturgical year", "feasts"],
+      "ortho": ["liturgical year", "feasts"],
+      "anglican": ["church year"],
+      "protestant": ["church calendar"],
+      "adventist": ["biblical feasts question"]
+    }
+  },
+  "sabbath": {
+    "name": "Sabbath",
+    "terms": {
+      "adventist": ["seventh-day Sabbath", "Saturday Sabbath"],
+      "seventh_day_adventist": ["Sabbath"],
+      "messianic": ["Shabbat", "Sabbath"],
+      "protestant": ["Lord's Day", "Christian Sabbath"],
+      "catholic": ["Sunday", "Lord's Day"],
+      "lds": ["Sabbath day"]
+    }
+  },
+  "sunday_worship": {
+    "name": "Sunday worship",
+    "terms": {
+      "catholic": ["Sunday obligation", "Lord's Day"],
+      "ortho": ["Lord's Day"],
+      "protestant": ["Sunday worship", "Lord's Day"]
+    }
+  },
+  "icons": {
+    "name": "Icons and images",
+    "terms": {
+      "ortho": ["icons", "holy icons", "iconography"],
+      "oriental_ortho": ["icons"],
+      "catholic": ["sacred images", "statues", "icons"],
+      "protestant": ["images", "idols"],
+      "reformed": ["images in worship"]
+    }
+  },
+  "veneration": {
+    "name": "Veneration",
+    "terms": {
+      "catholic": ["veneration", "dulia", "hyperdulia"],
+      "ortho": ["veneration", "proskynesis"],
+      "protestant": ["worship of saints", "veneration"]
+    }
+  },
+  "fasting": {
+    "name": "Fasting",
+    "terms": {
+      "catholic": ["fasting", "abstinence"],
+      "ortho": ["fasting", "Great Lent"],
+      "oriental_ortho": ["fasting"],
+      "protestant": ["fasting"],
+      "lds": ["fast Sunday"]
+    }
+  },
+  "sacred_music": {
+    "name": "Music in worship",
+    "terms": {
+      "catholic": ["sacred music", "chant"],
+      "ortho": ["chant", "liturgical singing"],
+      "protestant": ["hymns", "worship music"],
+      "evangelical": ["contemporary worship", "hymns"]
+    }
+  },
+  "instrumental_music": {
+    "name": "Instrumental music",
+    "terms": {
+      "churches_of_christ": ["a cappella worship", "instrumental music"],
+      "ortho": ["unaccompanied chant"],
+      "protestant": ["instruments in worship"]
+    }
+  },
+  "preaching": {
+    "name": "Preaching",
+    "terms": {
+      "protestant": ["preaching", "the sermon"],
+      "reformed": ["preaching of the Word"],
+      "catholic": ["homily"],
+      "ortho": ["homily"]
+    }
+  },
+  "altar_call": {
+    "name": "Altar call",
+    "terms": {
+      "evangelical": ["altar call", "invitation"],
+      "baptist": ["invitation", "coming forward"],
+      "pentecostal": ["altar call"]
+    }
+  },
+  "sign_of_the_cross": {
+    "name": "Sign of the cross",
+    "terms": {
+      "catholic": ["sign of the cross"],
+      "ortho": ["sign of the cross"],
+      "oriental_ortho": ["sign of the cross"],
+      "lutheran": ["sign of the cross"],
+      "anglican": ["sign of the cross"]
+    }
+  },
+  "rosary": {
+    "name": "Rosary",
+    "terms": {
+      "catholic": ["Rosary"],
+      "anglican": ["Anglican rosary"],
+      "ortho": ["prayer rope", "komboskini"]
+    }
+  },
+  "jesus_prayer": {
+    "name": "Jesus Prayer",
+    "terms": {
+      "ortho": ["Jesus Prayer", "prayer of the heart"],
+      "oriental_ortho": ["Jesus Prayer"],
+      "catholic": ["Jesus Prayer"]
+    }
+  },
+  "mary": {
+    "name": "Mary",
+    "terms": {
+      "catholic": ["Blessed Virgin Mary", "Our Lady"],
+      "ortho": ["Theotokos", "Panagia", "Mother of God"],
+      "oriental_ortho": ["Theotokos", "Mother of God"],
+      "protestant": ["Mary", "mother of Jesus"],
+      "lds": ["Mary"]
+    }
+  },
+  "theotokos": {
+    "name": "Mother of God",
+    "terms": {
+      "catholic": ["Mother of God", "Theotokos"],
+      "ortho": ["Theotokos", "Mother of God"],
+      "oriental_ortho": ["Theotokos"],
+      "church_of_the_east": ["Christotokos", "Mother of Christ"],
+      "protestant": ["mother of Jesus", "Mother of God"]
+    }
+  },
+  "immaculate_conception": {
+    "name": "Immaculate Conception",
+    "terms": {
+      "catholic": ["Immaculate Conception"],
+      "ortho": ["sinlessness of Mary", "Immaculate Conception"],
+      "protestant": ["Immaculate Conception"]
+    }
+  },
+  "assumption": {
+    "name": "Assumption or Dormition",
+    "terms": {
+      "catholic": ["Assumption"],
+      "ortho": ["Dormition"],
+      "oriental_ortho": ["Dormition"],
+      "protestant": ["Assumption"]
+    }
+  },
+  "perpetual_virginity": {
+    "name": "Perpetual virginity",
+    "terms": {
+      "catholic": ["perpetual virginity"],
+      "ortho": ["ever-virgin"],
+      "protestant": ["brothers of Jesus", "perpetual virginity"],
+      "lutheran": ["perpetual virginity"],
+      "reformed": ["brothers of the Lord"]
+    }
+  },
+  "intercession_of_saints": {
+    "name": "Intercession of saints",
+    "terms": {
+      "catholic": ["intercession of saints", "praying to saints"],
+      "ortho": ["intercession of the saints"],
+      "oriental_ortho": ["intercession of the saints"],
+      "protestant": ["prayer to saints", "communion of saints"],
+      "lds": ["prayer only to the Father"]
+    }
+  },
+  "relics": {
+    "name": "Relics",
+    "terms": {
+      "catholic": ["relics"],
+      "ortho": ["holy relics"],
+      "protestant": ["relics"]
+    }
+  },
+  "prayers_for_the_dead": {
+    "name": "Prayers for the dead",
+    "terms": {
+      "catholic": ["prayers for the dead", "suffrages"],
+      "ortho": ["prayers for the departed"],
+      "oriental_ortho": ["prayers for the departed"],
+      "protestant": ["prayers for the dead"],
+      "lds": ["baptism for the dead", "work for the dead"]
+    }
+  },
+  "canonization_of_saints": {
+    "name": "Recognizing saints",
+    "terms": {
+      "catholic": ["canonization"],
+      "ortho": ["glorification of saints"],
+      "protestant": ["saints as all believers"]
+    }
+  },
+  "heaven": {
+    "name": "Heaven",
+    "terms": {
+      "catholic": ["heaven", "beatific vision"],
+      "ortho": ["heaven", "paradise"],
+      "protestant": ["heaven"],
+      "lds": ["heaven", "celestial kingdom"],
+      "jehovahs_witnesses": ["heavenly hope", "little flock"]
+    }
+  },
+  "hell": {
+    "name": "Hell",
+    "terms": {
+      "catholic": ["hell", "Gehenna"],
+      "ortho": ["hell", "Hades"],
+      "protestant": ["hell", "eternal punishment"],
+      "lds": ["hell", "outer darkness", "spirit prison"],
+      "jehovahs_witnesses": ["Gehenna", "no immortal soul in torment"]
+    }
+  },
+  "purgatory": {
+    "name": "Purgatory",
+    "terms": {
+      "catholic": ["purgatory", "purification after death"],
+      "ortho": ["toll houses", "particular judgment"],
+      "protestant": ["purgatory"],
+      "anglican": ["intermediate state"]
+    }
+  },
+  "intermediate_state": {
+    "name": "Intermediate state",
+    "terms": {
+      "protestant": ["intermediate state", "with the Lord"],
+      "catholic": ["particular judgment"],
+      "ortho": ["particular judgment", "Hades"],
+      "adventist": ["state of the dead"],
+      "lds": ["spirit world", "paradise and prison"]
+    }
+  },
+  "soul_sleep": {
+    "name": "State of the dead",
+    "terms": {
+      "adventist": ["soul sleep", "unconscious dead"],
+      "seventh_day_adventist": ["state of the dead"],
+      "jehovahs_witnesses": ["the dead are unconscious"],
+      "christadelphian": ["sleep of the dead"],
+      "protestant": ["conscious intermediate state"],
+      "catholic": ["immortal soul"]
+    }
+  },
+  "resurrection_of_the_dead": {
+    "name": "Resurrection of the dead",
+    "terms": {
+      "catholic": ["resurrection of the body"],
+      "ortho": ["resurrection of the dead"],
+      "protestant": ["resurrection of the dead"],
+      "lds": ["resurrection"],
+      "jehovahs_witnesses": ["resurrection to earth"]
+    }
+  },
+  "last_judgment": {
+    "name": "Last judgment",
+    "terms": {
+      "catholic": ["Last Judgment", "general judgment"],
+      "ortho": ["Last Judgment"],
+      "protestant": ["final judgment", "great white throne"],
+      "lds": ["final judgment"],
+      "adventist": ["investigative judgment", "pre-advent judgment"]
+    }
+  },
+  "investigative_judgment": {
+    "name": "Investigative judgment",
+    "terms": {
+      "seventh_day_adventist": ["investigative judgment", "heavenly sanctuary"],
+      "adventist": ["pre-advent judgment"],
+      "protestant": ["judgment"]
+    }
+  },
+  "second_coming": {
+    "name": "Second coming",
+    "terms": {
+      "catholic": ["Second Coming", "Parousia"],
+      "ortho": ["Second Coming", "Parousia"],
+      "protestant": ["Second Coming", "return of Christ"],
+      "adventist": ["Advent", "soon return"],
+      "lds": ["Second Coming"]
+    }
+  },
+  "millennium": {
+    "name": "Millennium",
+    "terms": {
+      "protestant": ["millennium", "thousand years"],
+      "evangelical": ["premillennialism", "amillennialism", "postmillennialism"],
+      "adventist": ["millennium"],
+      "lds": ["Millennium"],
+      "catholic": ["millennium"],
+      "jehovahs_witnesses": ["thousand-year reign"]
+    }
+  },
+  "rapture": {
+    "name": "Rapture",
+    "terms": {
+      "evangelical": ["rapture", "caught up"],
+      "protestant": ["rapture"],
+      "catholic": ["rapture teaching"],
+      "adventist": ["no secret rapture"]
+    }
+  },
+  "annihilation": {
+    "name": "Final fate of the lost",
+    "terms": {
+      "adventist": ["annihilation", "conditional immortality"],
+      "jehovahs_witnesses": ["destruction of the wicked"],
+      "protestant": ["eternal conscious torment", "hell"],
+      "catholic": ["eternal punishment"],
+      "ortho": ["eternal punishment"]
+    }
+  },
+  "degrees_of_glory": {
+    "name": "Degrees of glory",
+    "terms": {
+      "lds": ["degrees of glory", "celestial terrestrial telestial"],
+      "community_of_christ": ["degrees of glory"],
+      "protestant": ["one heaven"]
+    }
+  },
+  "spirit_world": {
+    "name": "Spirit world",
+    "terms": {
+      "lds": ["spirit world", "spirit paradise", "spirit prison"],
+      "protestant": ["Hades", "Sheol"]
+    }
+  },
+  "new_creation": {
+    "name": "New creation",
+    "terms": {
+      "catholic": ["new heavens and new earth"],
+      "ortho": ["new creation"],
+      "protestant": ["new heavens and new earth"],
+      "jehovahs_witnesses": ["Paradise Earth"],
+      "lds": ["renewed earth"]
+    }
+  },
+  "marriage": {
+    "name": "Marriage",
+    "terms": {
+      "catholic": ["marriage", "sacrament of Matrimony"],
+      "ortho": ["marriage", "crowning"],
+      "protestant": ["Christian marriage"],
+      "lds": ["eternal marriage", "sealing"]
+    }
+  },
+  "divorce": {
+    "name": "Divorce and remarriage",
+    "terms": {
+      "catholic": ["divorce", "annulment", "indissolubility"],
+      "ortho": ["divorce", "economia"],
+      "protestant": ["divorce and remarriage"],
+      "lds": ["cancellation of sealing", "divorce"]
+    }
+  },
+  "contraception": {
+    "name": "Contraception",
+    "terms": {
+      "catholic": ["contraception", "artificial birth control"],
+      "ortho": ["contraception"],
+      "protestant": ["birth control"]
+    }
+  },
+  "abortion": {
+    "name": "Abortion",
+    "terms": {
+      "catholic": ["abortion"],
+      "ortho": ["abortion"],
+      "protestant": ["abortion"],
+      "evangelical": ["abortion"]
+    }
+  },
+  "sexual_ethics": {
+    "name": "Sexual ethics",
+    "terms": {
+      "catholic": ["chastity", "sexual morality"],
+      "ortho": ["chastity"],
+      "protestant": ["sexual ethics"],
+      "evangelical": ["biblical sexual ethics"],
+      "lds": ["law of chastity"]
+    }
+  },
+  "tithing": {
+    "name": "Tithing",
+    "terms": {
+      "lds": ["tithing"],
+      "adventist": ["tithe"],
+      "evangelical": ["tithe", "tithing"],
+      "protestant": ["giving", "stewardship"],
+      "catholic": ["stewardship", "offerings"]
+    }
+  },
+  "alcohol": {
+    "name": "Alcohol",
+    "terms": {
+      "adventist": ["temperance", "abstinence from alcohol"],
+      "holiness": ["total abstinence"],
+      "lds": ["Word of Wisdom", "no alcohol"],
+      "protestant": ["moderation", "wine"],
+      "catholic": ["temperance"]
+    }
+  },
+  "pacifism": {
+    "name": "War and peace",
+    "terms": {
+      "anabaptist": ["nonresistance", "pacifism"],
+      "mennonite": ["peace witness"],
+      "quaker": ["peace testimony"],
+      "catholic": ["just war"],
+      "protestant": ["just war", "pacifism"]
+    }
+  },
+  "church_and_state": {
+    "name": "Church and state",
+    "terms": {
+      "baptist": ["separation of church and state", "soul liberty"],
+      "catholic": ["church and state"],
+      "ortho": ["symphony", "church and empire"],
+      "protestant": ["church and state"],
+      "lds": ["political neutrality", "church and state"]
+    }
+  },
+  "oaths": {
+    "name": "Oaths",
+    "terms": {
+      "quaker": ["no oaths", "affirmation"],
+      "anabaptist": ["oaths"],
+      "protestant": ["oaths"],
+      "catholic": ["oaths"]
+    }
+  },
+  "food_laws": {
+    "name": "Food laws",
+    "terms": {
+      "adventist": ["health message", "unclean meats"],
+      "messianic": ["kashrut", "food laws"],
+      "lds": ["Word of Wisdom"],
+      "jehovahs_witnesses": ["blood", "abstain from blood"],
+      "protestant": ["all foods clean"]
+    }
+  },
+  "ordination_of_women": {
+    "name": "Ordination of women",
+    "terms": {
+      "catholic": ["ordination of women", "male-only priesthood"],
+      "ortho": ["ordination of women"],
+      "protestant": ["women in ministry", "ordination of women"],
+      "methodist": ["women's ordination"],
+      "baptist": ["women pastors"],
+      "lds": ["women and priesthood"]
+    }
+  },
+  "headship": {
+    "name": "Headship of men and women",
+    "terms": {
+      "evangelical": ["complementarianism", "egalitarianism", "headship"],
+      "protestant": ["headship", "roles of men and women"],
+      "catholic": ["complementarity"],
+      "ortho": ["headship"],
+      "lds": ["presiding in the home"]
+    }
+  },
+  "head_covering": {
+    "name": "Head covering",
+    "terms": {
+      "anabaptist": ["head covering", "prayer covering"],
+      "ortho": ["head covering"],
+      "catholic": ["chapel veil", "mantilla"],
+      "protestant": ["head covering"]
+    }
+  },
+  "mormon_label": {
+    "name": "Mormon as a label",
+    "terms": {
+      "lds": ["Latter-day Saint", "Mormon", "Mormon Church"],
+      "community_of_christ": ["Mormon", "RLDS"],
+      "protestant": ["Mormon"]
+    }
+  },
+  "roman_catholic_label": {
+    "name": "Roman Catholic as a label",
+    "terms": {
+      "catholic": ["Catholic", "Roman Catholic", "the Church"],
+      "ortho": ["Roman Catholic", "Latins"],
+      "protestant": ["Roman Catholic", "Catholic"]
+    }
+  },
+  "separated_brethren": {
+    "name": "Names for other Christians",
+    "terms": {
+      "catholic": ["separated brethren", "other Christians"],
+      "ortho": ["heterodox", "non-Orthodox"],
+      "protestant": ["other denominations"],
+      "evangelical": ["nominal Christians", "other believers"]
+    }
+  },
+  "true_church_claim": {
+    "name": "True church claim",
+    "terms": {
+      "catholic": ["the Catholic Church"],
+      "ortho": ["the Orthodox Church"],
+      "lds": ["only true and living church"],
+      "iglesia_ni_cristo": ["the true Church of Christ"],
+      "restorationist": ["New Testament church"]
+    }
+  }
+}

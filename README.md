@@ -52,6 +52,8 @@ A reserved `_meta` object in JSON (or `_meta.x=…` lines in `.lang`):
 | `reviewed_by` | list of sect ids whose adherents reviewed the pack; empty shows "Not yet reviewed by an adherent" |
 | `priority` | number, default 0; decides which pack wins on a duplicate key |
 
+For AI-drafted content use `"author": "unverified: auto-generated"` and `"priority": -10`; the site tags such entries *unverified* and any human pack overrides them. Ready-made bulk and single-item prompts (including ones that decide the full list of sects and subjects) are in [`docs/LLM_PROMPTS.md`](docs/LLM_PROMPTS.md).
+
 ### Duplicate keys: later wins
 
 Packs load in order of `priority`, then file path. If two packs define the same key for the same audience, the later one wins and the build prints an `override:` note. So a community fix is a new file with a higher `priority`; the original is untouched. (Without `priority`, `community-x` sorts *before* `core-` alphabetically and would lose.)
@@ -73,7 +75,9 @@ The entry page says which level answered, and the list marks it (`via Evangelica
 | `registry/sects.json` | `id`, `name`, optional `parent`, optional `blurb`. Add a sect here and its `.suffix` becomes valid immediately. |
 | `registry/subjects.json` | Subject ids with a display `name` and per-sect search `terms`. |
 
-`terms` is what makes search work: a reader types "born again" without knowing your subject id. The **first** term listed for a sect is also used as the entry title, since it's how that sect names the idea (`evangelical: ["born again", …]`). Search matches every sect's terms, so searching "theosis" also finds the other traditions' takes on salvation. The sample terms are illustrative; you own the real ones.
+Both registries are also read from folders, so additions can be new files instead of edits: every `registry/sects/*.json` (a list) is appended to the sects, and every `registry/subjects/*.json` (an object) is merged into the subjects. A subject id may appear in several files: their `terms` combine, and `name` can be omitted after the first file. Duplicate sect ids, a conflicting name, or the same sect's terms given twice for one subject fail the build.
+
+`terms` is what makes search work: a reader types "born again" without knowing your subject id. The **first** term listed for a sect is also used as the entry title, since it's how that sect names the idea (`evangelical: ["born again", …]`). A sect with no terms of its own uses its nearest ancestor's, so list a term at the broadest sect that shares it. Search matches every sect's terms, so searching "theosis" also finds the other traditions' takes on salvation. The sample terms are illustrative; you own the real ones.
 
 ## Validation (fails the build)
 

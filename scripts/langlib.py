@@ -146,6 +146,40 @@ def validate_sects(sects):
     return by_id, errors
 
 
+def merge_subjects(parts):
+    """Combine subject registries from several files: [(label, dict), ...] -> (merged, errors).
+
+    The same subject id may appear in more than one file. Its `terms` are combined (a sect's terms may
+    appear in only one file), and `name` may be omitted after the first file that gives it.
+    """
+    merged, errors = {}, []
+    for label, data in parts:
+        if not isinstance(data, dict):
+            errors.append(f"{label}: top level must be an object")
+            continue
+        for sid, subject in data.items():
+            if not isinstance(subject, dict):
+                errors.append(f'{label}: "{sid}" must be an object')
+                continue
+            slot = merged.setdefault(sid, {"terms": {}})
+            name = subject.get("name")
+            if name is not None:
+                if "name" in slot and slot["name"] != name:
+                    errors.append(f'{label}: "{sid}" is named "{name}" but an earlier file calls it "{slot["name"]}"')
+                else:
+                    slot["name"] = name
+            terms = subject.get("terms") or {}
+            if not isinstance(terms, dict):
+                errors.append(f'{label}: "{sid}".terms must be an object')
+                continue
+            for sect, phrases in terms.items():
+                if sect in slot["terms"]:
+                    errors.append(f'{label}: "{sid}" already has terms for "{sect}" from an earlier file')
+                else:
+                    slot["terms"][sect] = phrases
+    return merged, errors
+
+
 def validate_subjects(subjects, sect_ids):
     if not isinstance(subjects, dict):
         return ["registry/subjects.json: top level must be an object"]

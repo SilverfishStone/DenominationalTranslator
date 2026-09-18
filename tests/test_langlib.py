@@ -91,6 +91,28 @@ class Registries(unittest.TestCase):
         self.assertEqual(len(errors), 1)
 
 
+class MergeSubjects(unittest.TestCase):
+    def test_terms_combine_across_files_and_later_name_is_optional(self):
+        merged, errors = L.merge_subjects([
+            ("a.json", {"salvation": {"name": "Salvation", "terms": {"evangelical": ["saved"]}}}),
+            ("b.json", {"salvation": {"terms": {"ortho": ["theosis"]}}, "baptism": {"name": "Baptism"}}),
+        ])
+        self.assertEqual(errors, [])
+        self.assertEqual(merged["salvation"], {"name": "Salvation", "terms": {"evangelical": ["saved"], "ortho": ["theosis"]}})
+        self.assertEqual(merged["baptism"], {"name": "Baptism", "terms": {}})
+
+    def test_conflicting_name_and_repeated_sect_terms_are_errors(self):
+        _, errors = L.merge_subjects([
+            ("a.json", {"s": {"name": "One", "terms": {"x": ["a"]}}}),
+            ("b.json", {"s": {"name": "Two", "terms": {"x": ["b"]}}}),
+        ])
+        self.assertEqual(len(errors), 2)
+
+    def test_bad_shapes(self):
+        _, errors = L.merge_subjects([("a.json", []), ("b.json", {"s": "nope"})])
+        self.assertEqual(len(errors), 2)
+
+
 class Merge(unittest.TestCase):
     def test_priority_beats_file_order_and_overrides_are_reported(self):
         packs = [

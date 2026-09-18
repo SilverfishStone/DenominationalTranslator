@@ -28,6 +28,22 @@ def read_json(path, errors):
         return None
 
 
+def registry_parts(name, errors):
+    """registry/<name>.json first, then every registry/<name>/**/*.json in path order."""
+    files = [p for p in [REGISTRY_DIR / f"{name}.json"] if p.is_file()]
+    folder = REGISTRY_DIR / name
+    if folder.is_dir():
+        files += sorted(folder.rglob("*.json"))
+    if not files:
+        errors.append(f"registry/{name}.json: not found")
+    parts = []
+    for path in files:
+        data = read_json(path, errors)
+        if data is not None:
+            parts.append((path.relative_to(ROOT).as_posix(), data))
+    return parts
+
+
 def load_packs(sects_by_id, subjects, errors, notes):
     packs, sect_ids = [], set(sects_by_id)
     for path in sorted(p for p in LANG_DIR.rglob("*") if p.is_file()):
@@ -63,8 +79,19 @@ def write_json(path, data):
 
 def build(write=True):
     errors, notes = [], []
-    sects = read_json(REGISTRY_DIR / "sects.json", errors)
-    subjects = read_json(REGISTRY_DIR / "subjects.json", errors)
+    sect_parts = registry_parts("sects", errors)
+    subject_parts = registry_parts("subjects", errors)
+    if errors:
+        return fail(errors)
+
+    sects = []
+    for label, data in sect_parts:
+        if isinstance(data, list):
+            sects.extend(data)
+        else:
+            errors.append(f"{label}: top level must be a list")
+    subjects, merge_errors = L.merge_subjects(subject_parts)
+    errors += merge_errors
     if errors:
         return fail(errors)
 

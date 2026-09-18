@@ -33,13 +33,22 @@ async function loadBundle(id) {
 const isAudience = (id) => id === 'common' || state.sects.has(id);
 const sectName = (id) => (id === 'common' ? 'General' : state.sects.get(id)?.name ?? id);
 const subjectOf = (e) => state.index.subjects[e.subject];
-// The first term listed for the source sect is how that sect names the idea (e.g. "born again").
-const entryTitle = (e) => subjectOf(e)?.terms?.[e.source]?.[0] ?? subjectOf(e)?.name ?? e.subject;
+// A sect's own terms, or its nearest ancestor's when it has none (e.g. baptist -> evangelical).
+function termsFor(subject, sectId) {
+  for (let id = sectId; id; id = state.sects.get(id)?.parent) {
+    const terms = subject?.terms?.[id];
+    if (terms?.length) return terms;
+  }
+  return [];
+}
+// The first term is how that sect names the idea (e.g. "born again").
+const entryTitle = (e) => termsFor(subjectOf(e), e.source)[0] ?? subjectOf(e)?.name ?? e.subject;
 
 function tags(e) {
   const out = [];
   if (e.level === 'inherited') out.push(`<span class="tag">via ${esc(sectName(e.from))}</span>`);
   if (e.level === 'common') out.push('<span class="tag">general</span>');
+  if (/^unverified/i.test(e.author ?? '')) out.push('<span class="tag warn">unverified</span>');
   if (e.placeholder) out.push('<span class="tag warn">placeholder</span>');
   return out.join('');
 }
@@ -162,7 +171,6 @@ function viewEntry(bundle, key) {
     <dl class="meta">
       ${e.author ? `<dt>Author</dt><dd>${esc(e.author)}</dd>` : ''}
       <dt>Reviewed by</dt><dd>${reviewed}</dd>
-      <dt>Pack</dt><dd><code>${esc(e.pack)}</code></dd>
     </dl>
     ${related.length ? `<section><h2>Same topic, other traditions</h2><ul class="list">${related.map((r) => `
       <li><a href="#/a/${esc(aud)}/${esc(r.key)}"><span class="t">${esc(entryTitle(r))}</span><span class="s">${esc(sectName(r.source))}</span>${tags(r)}</a></li>`).join('')}</ul></section>` : ''}`;
