@@ -1,0 +1,9 @@
+# Same idea as the .json packs, in the Minecraft-style text format.
+# key=value, one per line. \n makes a line break. Blank lines and # comments are ignored.
+_meta.author=DenomBridge scaffold
+
+evangelical.new_birth=[PLACEHOLDER] The Evangelical idea of being 'born again', explained for a Catholic reader.\n\nThis pack is a .lang file to show the alternative format.
+evangelical.salvation=[PLACEHOLDER] What Evangelicals mean by being 'saved', explained for a Catholic reader.
+catholic.salvation=[PLACEHOLDER] The Catholic understanding of salvation, in Catholic terms (a self-description).
+catholic.communion=[PLACEHOLDER] The Catholic understanding of communion, in Catholic terms (a self-description).
+lds.christian_status=[PLACEHOLDER] Why Latter-day Saints' Christian status is disputed, explained for a Catholic reader.

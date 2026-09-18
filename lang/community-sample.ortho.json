@@ -1,0 +1,9 @@
+{
+  "_meta": {
+    "author": "Sample community contributor",
+    "reviewed_by": [],
+    "priority": 10
+  },
+
+  "evangelical.new_birth": "[PLACEHOLDER] Community revision: a reworded explanation of 'born again' for Orthodox readers.\n\nThis file overrides the entry in core.ortho.json without editing it. It wins because of _meta.priority (alphabetically it would lose to 'core')."
+}

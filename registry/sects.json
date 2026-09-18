@@ -1,0 +1,8 @@
+[
+  { "id": "catholic",    "name": "Catholic",         "parent": null },
+  { "id": "ortho",       "name": "Orthodox",         "parent": null },
+  { "id": "protestant",  "name": "Protestant",       "parent": null },
+  { "id": "evangelical", "name": "Evangelical",      "parent": "protestant" },
+  { "id": "baptist",     "name": "Baptist",          "parent": "evangelical", "blurb": "Sample child of Evangelical, here to demonstrate fallback: it has no pack of its own." },
+  { "id": "lds",         "name": "Latter-day Saint", "parent": null }
+]

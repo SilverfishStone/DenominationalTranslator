@@ -1,0 +1,30 @@
+{
+  "salvation": {
+    "name": "Salvation",
+    "terms": {
+      "evangelical": ["saved", "being saved"],
+      "ortho": ["salvation", "theosis"],
+      "catholic": ["salvation", "justification"],
+      "lds": ["salvation", "exaltation"]
+    }
+  },
+  "new_birth": {
+    "name": "New birth",
+    "terms": {
+      "evangelical": ["born again", "new birth"]
+    }
+  },
+  "christian_status": {
+    "name": "Who counts as Christian",
+    "terms": {
+      "lds": ["Christian identity", "Are Mormons Christian?", "Mormon"]
+    }
+  },
+  "communion": {
+    "name": "Communion",
+    "terms": {
+      "catholic": ["Eucharist", "Mass"],
+      "protestant": ["Lord's Supper"]
+    }
+  }
+}

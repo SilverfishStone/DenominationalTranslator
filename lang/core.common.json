@@ -1,0 +1,11 @@
+{
+  "_meta": { "author": "DenomBridge scaffold", "reviewed_by": [] },
+
+  "evangelical.new_birth": "[PLACEHOLDER] A general, denomination-neutral explanation of the Evangelical idea of being 'born again'.\n\nReplace with reviewed content.",
+  "evangelical.salvation": "[PLACEHOLDER] A general explanation of what Evangelicals mean by being 'saved'.",
+  "ortho.salvation": "[PLACEHOLDER] A general explanation of the Orthodox understanding of salvation.",
+  "catholic.salvation": "[PLACEHOLDER] A general explanation of the Catholic understanding of salvation.",
+  "catholic.communion": "[PLACEHOLDER] A general explanation of the Catholic understanding of communion.",
+  "lds.salvation": "[PLACEHOLDER] A general explanation of the Latter-day Saint understanding of salvation.",
+  "lds.christian_status": "[PLACEHOLDER] A general explanation of why Latter-day Saints' Christian status is disputed, describing both sides in their own terms."
+}
