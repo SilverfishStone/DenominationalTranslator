@@ -37,10 +37,11 @@ h2 { font-size: 1.05rem; margin: 1.6em 0 .5em; color: var(--accent); text-transf
 
 input[type=search] { width: 100%; padding: .65rem .85rem; font: inherit; color: var(--fg); background: var(--card); border: 1px solid var(--line); border-radius: 8px; }
 input[type=search]:focus { outline: 2px solid var(--accent-strong); border-color: var(--accent); }
-.chips { display: flex; flex-wrap: wrap; gap: .4rem; margin: .8rem 0 0; }
-.chips button { font: inherit; font-size: .85rem; padding: .25rem .7rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--fg); cursor: pointer; }
-.chips button:hover { border-color: var(--accent); }
-.chips button[aria-pressed=true] { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); }
+.filters { display: flex; flex-wrap: wrap; gap: .4rem; margin: .8rem 0 0; }
+.filters button, .filters select { font: inherit; font-size: .85rem; padding: .25rem .7rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--fg); cursor: pointer; }
+.filters select { max-width: 100%; }
+.filters button:hover, .filters select:hover { border-color: var(--accent); }
+.filters button[aria-pressed=true] { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); }
 
 .list { list-style: none; padding: 0; margin: 0; display: grid; gap: .4rem; }
 .list a { display: flex; flex-wrap: wrap; align-items: baseline; gap: .2rem .7rem; padding: .55rem .85rem; background: var(--card); border: 1px solid var(--line); border-radius: 8px; text-decoration: none; color: var(--fg); }

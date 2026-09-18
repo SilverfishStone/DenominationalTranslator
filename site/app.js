@@ -41,6 +41,12 @@ function termsFor(subject, sectId) {
   }
   return [];
 }
+// The reader's own tradition plus its parents: what "my tradition" means for filtering.
+function lineage(sectId) {
+  const out = [];
+  for (let id = sectId; id && id !== 'common'; id = state.sects.get(id)?.parent) out.push(id);
+  return out;
+}
 // The first term is how that sect names the idea (e.g. "born again").
 const entryTitle = (e) => termsFor(subjectOf(e), e.source)[0] ?? subjectOf(e)?.name ?? e.subject;
 
@@ -84,14 +90,28 @@ function viewAudience(bundle) {
   store.set(aud);
   document.title = `${sectName(aud)} · DenomBridge`;
 
-  const sources = [...new Set(bundle.entries.map((e) => e.source))].sort((a, b) => sectName(a).localeCompare(sectName(b)));
+  const counts = {};
+  for (const e of bundle.entries) counts[e.source] = (counts[e.source] ?? 0) + 1;
+  const mine = lineage(aud);
+  const byName = (a, b) => a.name.localeCompare(b.name);
+  const options = (list) => list.map((s) => `<option value="${esc(s.id)}">${esc(s.name)}${counts[s.id] ? ` (${counts[s.id]})` : ''}</option>`).join('');
+  const withEntries = state.index.sects.filter((s) => counts[s.id]).sort(byName);
+  const withoutEntries = state.index.sects.filter((s) => !counts[s.id]).sort(byName);
   const heading = aud === 'common' ? 'General explanations' : `Explained for ${esc(sectName(aud))} readers`;
   app.innerHTML = `
     <p class="crumbs"><a href="#/">← Change tradition</a></p>
     <h1>${heading}</h1>
     <p class="lede">Choose a belief from another tradition, or search for a term you've heard.</p>
     <input id="q" type="search" placeholder="Search a term, e.g. “born again”" value="${esc(state.query)}" autocomplete="off">
-    <div class="chips" id="chips"></div>
+    <div class="filters">
+      <button type="button" data-source="all">All traditions</button>
+      ${mine.length ? '<button type="button" data-source="mine">My tradition</button>' : ''}
+      <select id="src" aria-label="Show the beliefs of one tradition">
+        <option value="">Pick a tradition…</option>
+        ${withEntries.length ? `<optgroup label="With explanations">${options(withEntries)}</optgroup>` : ''}
+        ${withoutEntries.length ? `<optgroup label="Nothing written yet">${options(withoutEntries)}</optgroup>` : ''}
+      </select>
+    </div>
     <div id="results"></div>
     ${bundle.missing.length ? `<p class="hint">${bundle.missing.length} topic(s) have no explanation for you yet.</p>` : ''}`;
 
@@ -110,11 +130,12 @@ function viewAudience(bundle) {
 
   const paint = () => {
     const tokens = state.query.trim().toLowerCase().split(/\s+/).filter(Boolean);
-    app.querySelector('#chips').innerHTML = ['all', ...sources].map((id) =>
-      `<button type="button" data-source="${esc(id)}" aria-pressed="${state.source === id}">${id === 'all' ? 'All' : esc(sectName(id))}</button>`).join('');
+    app.querySelectorAll('.filters button').forEach((b) => b.setAttribute('aria-pressed', String(state.source === b.dataset.source)));
+    app.querySelector('#src').value = ['all', 'mine'].includes(state.source) ? '' : state.source;
 
+    const matches = (e) => state.source === 'all' || (state.source === 'mine' ? mine.includes(e.source) : e.source === state.source);
     const rows = bundle.entries
-      .filter((e) => state.source === 'all' || e.source === state.source)
+      .filter(matches)
       .map((e) => ({ e, score: score(e, tokens) }))
       .filter((r) => !tokens.length || r.score > 0)
       .sort((a, b) => b.score - a.score || entryTitle(a.e).localeCompare(entryTitle(b.e)));
@@ -125,21 +146,31 @@ function viewAudience(bundle) {
 
     app.querySelector('#results').innerHTML = order.length ? order.map((src) => `
       <section>
-        <h2>${src === aud ? 'Your own tradition' : `About ${esc(sectName(src))} beliefs`}</h2>
+        <h2>${src === aud ? 'Your own tradition' : mine.includes(src) ? `Your parent tradition: ${esc(sectName(src))}` : `About ${esc(sectName(src))} beliefs`}</h2>
         <ul class="list">${groups[src].map((e) => `
           <li><a href="#/a/${esc(aud)}/${esc(e.key)}">
             <span class="t">${esc(entryTitle(e))}</span>
             <span class="s">${esc(subjectOf(e)?.name ?? e.subject)}</span>${tags(e)}</a></li>`).join('')}
         </ul>
-      </section>`).join('') : '<p class="empty">Nothing matches. Try a different word.</p>';
+      </section>`).join('') : `<p class="empty">${emptyMessage(tokens.length > 0)}</p>`;
+  };
+
+  const emptyMessage = (searching) => {
+    if (searching) return 'Nothing matches. Try a different word.';
+    if (state.source === 'mine') {
+      return `Nothing has been written yet about ${esc(sectName(aud))} beliefs${mine.length > 1 ? ' or those of its parent traditions' : ''}.`;
+    }
+    if (state.source !== 'all') return `Nothing has been written yet about ${esc(sectName(state.source))} beliefs.`;
+    return 'Nothing has been written for this yet.';
   };
 
   const q = app.querySelector('#q');
   q.addEventListener('input', () => { state.query = q.value; paint(); });
-  app.querySelector('#chips').addEventListener('click', (ev) => {
+  app.querySelector('.filters').addEventListener('click', (ev) => {
     const btn = ev.target.closest('button[data-source]');
     if (btn) { state.source = btn.dataset.source; paint(); }
   });
+  app.querySelector('#src').addEventListener('change', (ev) => { state.source = ev.target.value || 'all'; paint(); });
   paint();
 }
 

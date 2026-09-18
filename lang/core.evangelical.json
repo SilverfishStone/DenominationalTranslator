@@ -1,9 +1,0 @@
-{
-  "_meta": { "author": "DenomBridge scaffold", "reviewed_by": [] },
-
-  "evangelical.new_birth": "[PLACEHOLDER] The Evangelical idea of being 'born again', in Evangelical terms (a self-description).",
-  "evangelical.salvation": "[PLACEHOLDER] What Evangelicals mean by being 'saved', in Evangelical terms (a self-description).",
-  "ortho.salvation": "[PLACEHOLDER] The Orthodox understanding of salvation, explained for an Evangelical reader.\n\nThis is the case where the same word ('saved') carries different weight.",
-  "catholic.salvation": "[PLACEHOLDER] The Catholic understanding of salvation, explained for an Evangelical reader.",
-  "lds.christian_status": "[PLACEHOLDER] Why Latter-day Saints' Christian status is disputed, explained for an Evangelical reader."
-}
