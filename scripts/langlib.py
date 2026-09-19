@@ -95,7 +95,29 @@ def parse_lang_text(text):
     return normalize_meta(meta), entries
 
 
-def entry_problems(entries, sects_by_id, subjects):
+MD_TERM_RE = re.compile(r"\[\[([A-Za-z0-9_]+)(?:\|[^\]]+)?\]\]")   # [[term]] or [[term|shown text]]
+MD_LINK_RE = re.compile(r"\[[^\]]+\]\(([^)\s]+)\)")                  # [text](target)
+
+
+def markup_problems(text, glossary, sects_by_id):
+    """Problems with Markdown-style markup in one entry: unknown [[terms]] and unusable link targets."""
+    problems = []
+    for term_id in MD_TERM_RE.findall(text):
+        if term_id not in glossary:
+            problems.append(f'unknown glossary term "[[{term_id}]]" (add it under registry/glossary?)')
+    for target in MD_LINK_RE.findall(text):
+        if target.startswith("site:"):
+            sect = sects_by_id.get(target[len("site:"):])
+            if sect is None:
+                problems.append(f'link "{target}" names an unknown sect')
+            elif not sect.get("site"):
+                problems.append(f'link "{target}": that sect has no "site" in registry/sects.json')
+        elif not target.startswith(("http://", "https://", "mailto:", "#/")):
+            problems.append(f'link target "{target}" is not allowed (use https://..., site:<sect_id> or #/...)')
+    return problems
+
+
+def entry_problems(entries, sects_by_id, subjects, glossary=None):
     problems = []
     for key, text in entries.items():
         match = KEY_RE.match(key)
@@ -109,6 +131,8 @@ def entry_problems(entries, sects_by_id, subjects):
             problems.append(f'key "{key}": unknown subject "{subject}" (add it to registry/subjects.json?)')
         if not text.strip():
             problems.append(f'key "{key}": empty text')
+        if glossary is not None:
+            problems.extend(f'key "{key}": {p}' for p in markup_problems(text, glossary, sects_by_id))
     return problems
 
 
@@ -131,6 +155,9 @@ def validate_sects(sects):
             by_id[sid] = sect
             if not isinstance(sect.get("name"), str) or not sect["name"]:
                 errors.append(f'registry/sects.json: "{sid}" needs a name')
+            site = sect.get("site")
+            if site is not None and not (isinstance(site, str) and site.startswith(("http://", "https://"))):
+                errors.append(f'registry/sects.json: "{sid}".site must be an http(s) URL')
     for sid, sect in by_id.items():
         parent = sect.get("parent")
         if parent is not None and parent not in by_id:
@@ -195,6 +222,63 @@ def validate_subjects(subjects, sect_ids):
                 errors.append(f'registry/subjects.json: "{sid}" has terms for unknown sect "{sect}"')
             elif not isinstance(terms, list) or not all(isinstance(t, str) for t in terms):
                 errors.append(f'registry/subjects.json: "{sid}".terms.{sect} must be a list of strings')
+    return errors
+
+
+def merge_glossary(parts):
+    """Combine glossary files: [(label, dict), ...] -> (merged, errors). A term id may be defined once."""
+    merged, errors = {}, []
+    for label, data in parts:
+        if not isinstance(data, dict):
+            errors.append(f"{label}: top level must be an object")
+            continue
+        for term_id, term in data.items():
+            if term_id in merged:
+                errors.append(f'{label}: glossary term "{term_id}" is defined more than once')
+            else:
+                merged[term_id] = term
+    return merged, errors
+
+
+def validate_glossary(glossary, sect_ids):
+    """Glossary shape: {id: {term, definition, aliases?, links?, familiar_to?, auto?}}."""
+    errors, names = [], {}
+    for term_id, term in glossary.items():
+        where = f'registry/glossary: "{term_id}"'
+        if not ID_RE.match(term_id):
+            errors.append(f'registry/glossary: invalid term id "{term_id}" (lowercase letters, digits, underscores)')
+        if not isinstance(term, dict):
+            errors.append(f"{where} must be an object")
+            continue
+        for field in ("term", "definition"):
+            if not isinstance(term.get(field), str) or not term[field].strip():
+                errors.append(f"{where} needs a {field}")
+        aliases = term.get("aliases", [])
+        if not isinstance(aliases, list) or not all(isinstance(a, str) and a.strip() for a in aliases):
+            errors.append(f"{where}.aliases must be a list of non-empty strings")
+            aliases = []
+        familiar = term.get("familiar_to", [])
+        if not isinstance(familiar, list):
+            errors.append(f"{where}.familiar_to must be a list of sect ids")
+        else:
+            errors.extend(f'{where}.familiar_to names unknown sect "{s}"' for s in familiar if s not in sect_ids)
+        if "auto" in term and not isinstance(term["auto"], bool):
+            errors.append(f"{where}.auto must be true or false")
+        for link in term.get("links", []) or []:
+            url = link.get("url") if isinstance(link, dict) else None
+            if not (isinstance(link, dict) and isinstance(link.get("label"), str) and isinstance(url, str)
+                    and url.startswith(("http://", "https://"))):
+                errors.append(f'{where}.links entries need a "label" and an http(s) "url"')
+        if term.get("auto") is not False:    # only auto-linked words can collide with each other
+            for name in [term.get("term"), *aliases]:
+                if isinstance(name, str):
+                    owner = names.setdefault(name.lower(), term_id)
+                    if owner != term_id:
+                        errors.append(f'registry/glossary: "{name}" is used by both "{owner}" and "{term_id}"')
+    for term_id, term in glossary.items():
+        if isinstance(term, dict) and isinstance(term.get("definition"), str):
+            errors.extend(f'registry/glossary: "{term_id}" refers to unknown term "[[{ref}]]"'
+                          for ref in MD_TERM_RE.findall(term["definition"]) if ref not in glossary)
     return errors
 
 

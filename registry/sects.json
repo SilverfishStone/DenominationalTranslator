@@ -1,10 +1,10 @@
 [
-  { "id": "catholic",    "name": "Catholic",         "parent": null },
+  { "id": "catholic",    "name": "Catholic",         "parent": null, "site": "https://www.vatican.va" },
   { "id": "ortho",       "name": "Eastern Orthodox",         "parent": null },
   { "id": "protestant",  "name": "Protestant",       "parent": null },
   { "id": "evangelical", "name": "Evangelical",      "parent": "protestant" },
   { "id": "baptist",     "name": "Baptist",          "parent": "protestant" },
-  { "id": "lds",         "name": "Latter-day Saint", "parent": null },
+  { "id": "lds",         "name": "Latter-day Saint", "parent": null, "site": "https://www.churchofjesuschrist.org" },
 { "id": "oriental_ortho", "name": "Oriental Orthodox", "parent": null },
   { "id": "armenian_apostolic", "name": "Armenian Apostolic", "parent": "oriental_ortho" },
   { "id": "coptic", "name": "Coptic Orthodox", "parent": "oriental_ortho" },
@@ -17,7 +17,7 @@
   { "id": "eastern_catholic", "name": "Eastern Catholic", "parent": "catholic" },
   { "id": "old_catholic", "name": "Old Catholic", "parent": "catholic" },
   { "id": "adventist", "name": "Adventist", "parent": "protestant" },
-  { "id": "seventh_day_adventist", "name": "Seventh-day Adventist", "parent": "adventist" },
+  { "id": "seventh_day_adventist", "name": "Seventh-day Adventist", "parent": "adventist", "site": "https://www.adventist.org" },
   { "id": "anabaptist", "name": "Anabaptist", "parent": "protestant" },
   { "id": "amish", "name": "Amish", "parent": "anabaptist" },
   { "id": "hutterite", "name": "Hutterite", "parent": "anabaptist" },
@@ -44,10 +44,10 @@
   { "id": "churches_of_christ", "name": "Churches of Christ", "parent": "restorationist" },
   { "id": "disciples", "name": "Christian Church (Disciples of Christ)", "parent": "restorationist" },
   { "id": "iglesia_ni_cristo", "name": "Iglesia ni Cristo", "parent": "restorationist" },
-  { "id": "jehovahs_witnesses", "name": "Jehovah's Witnesses", "parent": "restorationist" },
+  { "id": "jehovahs_witnesses", "name": "Jehovah's Witnesses", "parent": "restorationist", "site": "https://www.jw.org" },
   { "id": "new_apostolic", "name": "New Apostolic", "parent": "restorationist" },
   { "id": "oneness_pentecostal", "name": "Oneness Pentecostal", "parent": null },
-  { "id": "christian_science", "name": "Christian Science", "parent": null },
+  { "id": "christian_science", "name": "Christian Science", "parent": null, "site": "https://www.christianscience.com" },
   { "id": "unitarian", "name": "Unitarian Christian", "parent": null },
-  { "id": "community_of_christ", "name": "Community of Christ", "parent": "lds" }
+  { "id": "community_of_christ", "name": "Community of Christ", "parent": "lds", "site": "https://www.cofchrist.org" }
 ]

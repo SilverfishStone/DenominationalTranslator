@@ -152,5 +152,67 @@ class Resolve(unittest.TestCase):
         self.assertTrue(entries[0]["placeholder"])
 
 
+class Glossary(unittest.TestCase):
+    def test_merge_rejects_duplicate_ids(self):
+        merged, errors = L.merge_glossary([("a.json", {"theosis": {}}), ("b.json", {"theosis": {}, "pascha": {}})])
+        self.assertEqual(sorted(merged), ["pascha", "theosis"])
+        self.assertEqual(len(errors), 1)
+
+    def test_valid_entry(self):
+        good = {"theosis": {"term": "theosis", "definition": "Sharing in God's life.", "aliases": ["deification"],
+                            "familiar_to": ["ortho"], "links": [{"label": "More", "url": "https://example.org"}]}}
+        self.assertEqual(L.validate_glossary(good, {"ortho"}), [])
+
+    def test_shape_errors(self):
+        bad = {
+            "Bad Id": {"term": "x", "definition": "y"},
+            "no_def": {"term": "x"},
+            "unknown_sect": {"term": "u", "definition": "d", "familiar_to": ["nope"]},
+            "bad_link": {"term": "b", "definition": "d", "links": [{"label": "x", "url": "javascript:alert(1)"}]},
+        }
+        text = "\n".join(L.validate_glossary(bad, {"ortho"}))
+        for expected in ("invalid term id", "needs a definition", 'unknown sect "nope"', "http(s)"):
+            self.assertIn(expected, text)
+
+    def test_auto_link_name_collisions_are_caught_but_manual_terms_may_overlap(self):
+        clash = {"a": {"term": "Grace", "definition": "d"}, "b": {"term": "grace", "definition": "d"}}
+        self.assertEqual(len(L.validate_glossary(clash, set())), 1)
+        manual = {"a": {"term": "Grace", "definition": "d"}, "b": {"term": "grace", "definition": "d", "auto": False}}
+        self.assertEqual(L.validate_glossary(manual, set()), [])
+
+    def test_definitions_may_only_refer_to_real_terms(self):
+        errors = L.validate_glossary({"a": {"term": "a", "definition": "See [[ghost]]."}}, set())
+        self.assertEqual(len(errors), 1)
+
+
+class Markup(unittest.TestCase):
+    sects = {"catholic": {"site": "https://www.vatican.va"}, "ortho": {}}
+    glossary = {"theosis": {}}
+
+    def problems(self, text):
+        return L.markup_problems(text, self.glossary, self.sects)
+
+    def test_good_markup_has_no_problems(self):
+        text = "**Bold**, [[theosis]], [[theosis|deification]], [site](site:catholic), [x](https://a.org), [y](#/dictionary/theosis)."
+        self.assertEqual(self.problems(text), [])
+
+    def test_plain_text_and_placeholders_are_untouched(self):
+        self.assertEqual(self.problems("[PLACEHOLDER] Nothing special (really) here."), [])
+
+    def test_unknown_term_unknown_sect_missing_site_and_unsafe_targets(self):
+        for text in ("[[ghost]]", "[x](site:nope)", "[x](site:ortho)", "[x](javascript:alert(1))", "[x](ftp://a.org)"):
+            with self.subTest(text):
+                self.assertEqual(len(self.problems(text)), 1)
+
+    def test_entry_problems_reports_markup_only_when_a_glossary_is_given(self):
+        entries = {"ortho.salvation": "See [[ghost]]."}
+        self.assertEqual(L.entry_problems(entries, {"ortho": {}}, {"salvation": {}}), [])
+        self.assertEqual(len(L.entry_problems(entries, {"ortho": {}}, {"salvation": {}}, {})), 1)
+
+    def test_sect_site_must_be_http(self):
+        _, errors = L.validate_sects([{"id": "a", "name": "A", "site": "ftp://x"}, {"id": "b", "name": "B", "site": "https://b.org"}])
+        self.assertEqual(len(errors), 1)
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -1,0 +1,234 @@
+{
+  "theosis": {
+    "term": "theosis",
+    "aliases": ["deification", "divinization"],
+    "definition": "An Eastern Christian word for the goal of salvation: sharing, by God's grace, in his life and holiness. It does not mean becoming God in essence.",
+    "familiar_to": ["ortho", "oriental_ortho"]
+  },
+  "theotokos": {
+    "term": "Theotokos",
+    "definition": "A Greek title for Mary meaning 'God-bearer', or Mother of God. It affirms that the child she bore is God made flesh.",
+    "familiar_to": ["catholic", "ortho", "oriental_ortho"]
+  },
+  "transubstantiation": {
+    "term": "transubstantiation",
+    "definition": "The Catholic teaching that at Mass the substance of the bread and wine is changed into the body and blood of Christ, while their outward appearance stays the same.",
+    "familiar_to": ["catholic"]
+  },
+  "filioque": {
+    "term": "Filioque",
+    "definition": "A Latin word meaning 'and from the Son'. It names the phrase added in the West to the Nicene Creed, saying the Holy Spirit proceeds from the Father and the Son. Eastern churches do not use it.",
+    "familiar_to": ["catholic", "ortho", "oriental_ortho"]
+  },
+  "magisterium": {
+    "term": "Magisterium",
+    "definition": "The Catholic Church's teaching authority, exercised by the pope and the bishops in communion with him.",
+    "familiar_to": ["catholic"]
+  },
+  "hypostasis": {
+    "term": "hypostasis",
+    "aliases": ["hypostases"],
+    "definition": "A Greek term used in early Christian theology for an individual person or concrete existence, as in the three hypostases of the Trinity."
+  },
+  "hypostatic_union": {
+    "term": "hypostatic union",
+    "definition": "The teaching that in Jesus Christ the divine and human natures are united in one person.",
+    "familiar_to": ["catholic", "ortho"]
+  },
+  "chrismation": {
+    "term": "Chrismation",
+    "definition": "The Eastern Orthodox rite, given right after baptism, of anointing with blessed oil to seal a person with the gift of the Holy Spirit. It corresponds to confirmation in the West.",
+    "familiar_to": ["ortho", "oriental_ortho"]
+  },
+  "parousia": {
+    "term": "Parousia",
+    "definition": "A Greek word for 'coming' or 'presence', used for Christ's return at the end of the age.",
+    "familiar_to": ["catholic", "ortho"]
+  },
+  "eucharist": {
+    "term": "Eucharist",
+    "definition": "The central Christian meal of bread and wine, also called communion, the Lord's Supper or the Mass. Churches differ on how Christ is present in it.",
+    "familiar_to": ["catholic", "ortho", "oriental_ortho", "anglican", "lutheran"]
+  },
+  "septuagint": {
+    "term": "Septuagint",
+    "definition": "An ancient Greek translation of the Hebrew Scriptures, widely used by early Christians and still the Old Testament of the Eastern Orthodox Church.",
+    "familiar_to": ["ortho", "oriental_ortho"]
+  },
+  "deuterocanonical": {
+    "term": "deuterocanonical books",
+    "aliases": ["deuterocanonical"],
+    "definition": "Books such as Tobit, Wisdom and Sirach that Catholic and Orthodox Bibles include in the Old Testament, but most Protestant Bibles omit or print separately as the Apocrypha.",
+    "familiar_to": ["catholic", "ortho", "oriental_ortho", "anglican"]
+  },
+  "sacrament": {
+    "term": "sacrament",
+    "definition": "A sacred rite understood as a way God gives grace. Catholic and Orthodox churches count seven or more; most Protestants count two.",
+    "auto": false
+  },
+  "ordinance": {
+    "term": "ordinance",
+    "definition": "A rite that Christ commanded the church to keep. Many Protestants use the word for baptism and the Lord's Supper as acts of obedience rather than as ways of receiving grace. Latter-day Saints use it for the sacred rites needed for exaltation.",
+    "auto": false
+  },
+  "ex_cathedra": {
+    "term": "ex cathedra",
+    "definition": "Latin for 'from the chair'. In Catholic teaching, a solemn definition by the pope, speaking as teacher of the whole Church, which is held to be free from error.",
+    "familiar_to": ["catholic"]
+  },
+  "concupiscence": {
+    "term": "concupiscence",
+    "definition": "In Catholic teaching, the inclination toward sin that remains even after baptism.",
+    "familiar_to": ["catholic"]
+  },
+  "prevenient_grace": {
+    "term": "prevenient grace",
+    "definition": "God's grace that comes before a person's response, awakening them and making faith possible. Emphasized by Methodists and others in the Wesleyan tradition.",
+    "familiar_to": ["methodist", "holiness"]
+  },
+  "imputed_righteousness": {
+    "term": "imputed righteousness",
+    "definition": "The teaching, common in Protestant churches, that Christ's righteousness is credited to a believer, who is then declared righteous before God.",
+    "familiar_to": ["protestant"]
+  },
+  "epiclesis": {
+    "term": "epiclesis",
+    "definition": "The prayer in the liturgy asking the Holy Spirit to come upon the bread and wine.",
+    "familiar_to": ["catholic", "ortho", "oriental_ortho", "anglican"]
+  },
+  "iconostasis": {
+    "term": "iconostasis",
+    "definition": "A screen of icons separating the sanctuary from the main part of an Eastern Orthodox church.",
+    "familiar_to": ["ortho", "oriental_ortho"]
+  },
+  "pascha": {
+    "term": "Pascha",
+    "definition": "The Eastern Christian name for Easter.",
+    "familiar_to": ["ortho", "oriental_ortho"]
+  },
+  "dormition": {
+    "term": "Dormition",
+    "definition": "The 'falling asleep' of Mary: the Eastern Christian name for the end of her earthly life and her being taken to heaven.",
+    "familiar_to": ["ortho", "oriental_ortho"]
+  },
+  "anglo_catholic": {
+    "term": "Anglo-Catholic",
+    "definition": "An Anglican who emphasizes the church's Catholic heritage: the sacraments, ceremony and apostolic succession.",
+    "familiar_to": ["anglican"]
+  },
+  "book_of_common_prayer": {
+    "term": "Book of Common Prayer",
+    "definition": "The prayer book of the Church of England and many other Anglican churches, first issued in the sixteenth century.",
+    "familiar_to": ["anglican"]
+  },
+  "sola_scriptura": {
+    "term": "sola scriptura",
+    "definition": "Latin for 'Scripture alone': the Reformation principle that the Bible is the final authority for doctrine.",
+    "familiar_to": ["protestant"]
+  },
+  "dispensationalism": {
+    "term": "dispensationalism",
+    "definition": "A way of reading the Bible that divides history into distinct ages. Common among some Evangelicals, it is associated with belief in a pre-tribulation rapture.",
+    "familiar_to": ["evangelical"]
+  },
+  "glossolalia": {
+    "term": "glossolalia",
+    "aliases": ["speaking in tongues"],
+    "definition": "Speaking in words the speaker has not learned, understood by Pentecostals and others as prayer in a Spirit-given language.",
+    "familiar_to": ["pentecostal", "oneness_pentecostal"]
+  },
+  "cessationism": {
+    "term": "cessationism",
+    "definition": "The view that miraculous gifts such as tongues and prophecy ended with the age of the apostles.",
+    "familiar_to": ["reformed", "reformed_baptist"]
+  },
+  "continuationism": {
+    "term": "continuationism",
+    "definition": "The view that miraculous gifts such as tongues, healing and prophecy continue in the church today.",
+    "familiar_to": ["pentecostal"]
+  },
+  "meidung": {
+    "term": "Meidung",
+    "definition": "German for 'shunning': the Amish practice of avoiding a member who has been placed under the ban, until the person repents.",
+    "familiar_to": ["anabaptist"]
+  },
+  "antimension": {
+    "term": "antimension",
+    "definition": "A cloth signed by a bishop and placed on the altar in Orthodox churches, authorizing the liturgy to be celebrated there.",
+    "familiar_to": ["ortho", "oriental_ortho"]
+  },
+  "kashrut": {
+    "term": "kashrut",
+    "aliases": ["kosher"],
+    "definition": "The Jewish dietary laws, such as avoiding pork and shellfish and not mixing meat with dairy.",
+    "familiar_to": ["messianic"]
+  },
+  "tetragrammaton": {
+    "term": "Tetragrammaton",
+    "definition": "The four Hebrew letters (YHWH) of God's personal name in the Hebrew Bible.",
+    "familiar_to": ["jehovahs_witnesses", "messianic"]
+  },
+  "hesychasm": {
+    "term": "hesychasm",
+    "aliases": ["hesychast", "hesychasts"],
+    "definition": "An Eastern Christian tradition of inner stillness and prayer, especially the repeated Jesus Prayer.",
+    "familiar_to": ["ortho", "oriental_ortho"]
+  },
+  "sealing": {
+    "term": "sealing",
+    "aliases": ["sealings"],
+    "definition": "In Latter-day Saint teaching, a temple ordinance that joins a husband and wife, and their children, together for eternity.",
+    "familiar_to": ["lds"]
+  },
+  "endowment": {
+    "term": "endowment",
+    "definition": "In Latter-day Saint teaching, a temple ordinance in which members receive instruction and make covenants with God.",
+    "familiar_to": ["lds"]
+  },
+  "apostolic_succession": {
+    "term": "apostolic succession",
+    "definition": "The teaching that bishops are linked to the apostles by an unbroken line of ordinations, so that the church's ministry and teaching continue from them.",
+    "familiar_to": ["catholic", "ortho", "oriental_ortho", "anglican"]
+  },
+  "real_presence": {
+    "term": "Real Presence",
+    "definition": "The belief that Christ is truly present in the bread and wine of communion. Churches differ on how he is present.",
+    "familiar_to": ["catholic", "ortho", "oriental_ortho", "lutheran", "anglican"]
+  },
+  "ecumenical_council": {
+    "term": "ecumenical councils",
+    "aliases": ["ecumenical council"],
+    "definition": "Gatherings of bishops from the whole church, especially the early councils from Nicaea in 325 onward that defined belief about the Trinity and Christ.",
+    "familiar_to": ["catholic", "ortho", "oriental_ortho"]
+  },
+  "nicene_creed": {
+    "term": "Nicene Creed",
+    "definition": "The statement of Christian faith drawn up at the councils of Nicaea (325) and Constantinople (381), recited in many churches.",
+    "familiar_to": ["catholic", "ortho", "oriental_ortho", "anglican", "lutheran"]
+  },
+  "miaphysite": {
+    "term": "miaphysite",
+    "definition": "Describes churches that teach Christ has 'one incarnate nature' of God the Word. It is used for the Oriental Orthodox churches.",
+    "familiar_to": ["oriental_ortho"]
+  },
+  "dyophysite": {
+    "term": "dyophysite",
+    "definition": "Describes the teaching that Christ has two natures, divine and human, kept distinct in one person. Used especially for the Church of the East.",
+    "familiar_to": ["church_of_the_east", "catholic", "ortho"]
+  },
+  "purgatory": {
+    "term": "purgatory",
+    "definition": "In Catholic teaching, a state of purification after death for those who die in God's friendship but are not yet fully holy.",
+    "familiar_to": ["catholic"]
+  },
+  "rapture": {
+    "term": "rapture",
+    "definition": "The belief, common among some Evangelicals, that Christians will be taken up to meet Christ before or during a time of great tribulation.",
+    "familiar_to": ["evangelical"]
+  },
+  "mortal_sin": {
+    "term": "mortal sin",
+    "definition": "In Catholic teaching, a grave sin committed knowingly and freely, which breaks a person's friendship with God until it is repented and forgiven.",
+    "familiar_to": ["catholic"]
+  }
+}

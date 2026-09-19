@@ -1,6 +1,6 @@
 # Writing content with an LLM
 
-Everything an LLM writes for DenomBridge is a **draft**. Three habits keep that honest:
+Everything an LLM writes for In Good Faith is a **draft**. Three habits keep that honest:
 
 1. **Label it.** Every AI-written lang pack has `"author": "unverified: auto-generated"` and `"reviewed_by": []`. The site shows an *unverified* tag on those entries.
 2. **Give it low priority.** AI packs use `"priority": -10`, so any human-written pack (priority 0 or higher) automatically wins for the same key. A draft can never shadow something a person wrote.
@@ -8,7 +8,7 @@ Everything an LLM writes for DenomBridge is a **draft**. Three habits keep that 
 
 There are two lanes:
 
-- **Bulk prompts (Bulk 1 to 5):** the LLM decides what's needed and produces it all. Use these to stand the site up.
+- **Bulk prompts (Bulk 1 to 6):** the LLM decides what's needed and produces it all. Use these to stand the site up.
 - **Single-item prompts (A to D):** one subject, one sect, one entry at a time. Use these for later additions and fixes.
 
 ## Recommended order for a full bulk run
@@ -19,6 +19,7 @@ There are two lanes:
 4. **Bulk 4** once per sect: that tradition describing itself. Start with the major ones.
 5. **Bulk 5** with audience `common` first: a neutral explanation of every belief, which gives *every* reader a complete baseline through fallback. Then Bulk 5 for individual audiences (major families first; their branches inherit from them).
 6. Later, when you add a sect, run **Bulk 3** to give it terms on existing subjects.
+7. **Bulk 6** builds the glossary of unfamiliar words (pop-up definitions). Save it as `registry/glossary/bulk-01.json`. The site links glossary words automatically, so entries need no extra markup.
 
 Scale warning: the full matrix is (audiences) x (subject and source-sect pairs) entries at roughly 150 words each, which is enormous. Steps 4 and 5-with-`common` already give complete coverage. Per-audience translations are an upgrade you can add gradually, most valuable audience first.
 
@@ -37,7 +38,7 @@ How the registry files combine: `registry/sects.json` plus every file under `reg
 ## The rules block (paste first, every time)
 
 ````text
-You are helping build DenomBridge, a static website where a reader from one Christian tradition can look up a belief of another tradition and read it explained in their own tradition's vocabulary. All content is stored in small data files. Follow these rules exactly.
+You are helping build In Good Faith, a static website where a reader from one Christian tradition can look up a belief of another tradition and read it explained in their own tradition's vocabulary. All content is stored in small data files. Follow these rules exactly.
 
 WHAT YOU WRITE
 - Explain, don't argue. Describe each belief the way its own adherents would recognise and accept as fair. Never advocate for or against a tradition, and never claim to know what a tradition "really" believes beneath what it says.
@@ -46,7 +47,7 @@ WHAT YOU WRITE
 - Use neutral, respectful vocabulary. Avoid loaded labels (for example "cult"). If a disputed label matters to the topic, say who uses it and why, as a description.
 - Only state what you are confident is true of that tradition's official or widely held teaching. If belief varies within a tradition, say so briefly. If you are unsure, say less. Never invent quotations, citations, section numbers, dates or statistics. Name a primary source (a catechism, confession, creed, scripture passage) only if you are certain it exists and says what you claim.
 - Length: about 80 to 200 words per entry, in 1 to 3 short paragraphs.
-- Plain text only. No Markdown, no bullet lists, no headings, no HTML. Separate paragraphs with a blank line (in JSON, the two characters \n\n). Use single quotes, not double quotes, inside the text so the JSON stays valid.
+- Plain text only. No Markdown, no bullet lists, no headings, no HTML, and no [[...]] markup: the site defines unfamiliar words automatically from its glossary. Separate paragraphs with a blank line (in JSON, the two characters \n\n). Use single quotes, not double quotes, inside the text so the JSON stays valid.
 - Never begin an entry with [PLACEHOLDER].
 
 FILE FORMAT
@@ -209,6 +210,40 @@ Output:
 - The file lang/auto/bulk-<NN>.<audience_id>.json, where NN is the batch number (01, 02, and so on).
 - Then the single line: DONE <k> of <total> | NEXT: <subject_id>.<source_sect_id>
   I will reply "continue" for the next batch, or paste the NEXT value into a new chat as "Start after". Never repeat entries from earlier batches. When the list is finished, end with the single line COMPLETE.
+````
+
+---
+
+## Bulk 6: build the glossary
+
+Words that readers from other traditions won't know get a pop-up definition, and the site links them automatically. Run this after the subjects exist, since their `terms` are full of insider vocabulary.
+
+````text
+[Rules block pasted above.]
+
+Sect registry (all files):
+{{paste}}
+
+Subject registry (all files merged):
+{{paste}}
+
+Glossary so far (registry/glossary.json plus any files in registry/glossary/; it may be empty):
+{{paste}}
+
+TASK: Propose glossary entries for every insider word, name or phrase in the subject registry (in the "terms" lists and the subject names) that a curious reader from a DIFFERENT tradition, or from none, would not understand. Add only entries not already in the glossary.
+
+For each entry produce:
+- the object key: lowercase snake_case id, unique, no dots.
+- "term": the word as it should read, capitalized as it normally is (Theotokos, transubstantiation).
+- "definition": one or two plain sentences that a newcomer can follow. Describe, do not argue. If traditions disagree about the thing, say who holds what, briefly. No double quotes inside the text (use single quotes).
+- "aliases" (optional): other spellings or names for the same word that should also get the pop-up.
+- "familiar_to" (optional): sect ids from the sect registry whose members already know the word, so they are not shown a definition for their own vocabulary. A child sect is covered by listing its parent.
+- "auto" (optional): set false for words that are also ordinary English or that appear constantly (for example 'grace', 'sacrament'); those will get a pop-up only where an editor marks them by hand.
+
+Rules: two auto-linked entries must never share a term or alias (case does not matter); never define a word only by repeating it; only sect ids from the registry.
+
+Output: registry/glossary/bulk-01.json as ONE JSON object of the new entries, then "Judgement calls": words you left out and why.
+(This task does not produce a lang file: ignore the FILE FORMAT and _meta rules.)
 ````
 
 ---

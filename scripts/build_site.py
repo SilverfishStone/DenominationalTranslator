@@ -28,13 +28,13 @@ def read_json(path, errors):
         return None
 
 
-def registry_parts(name, errors):
+def registry_parts(name, errors, required=True):
     """registry/<name>.json first, then every registry/<name>/**/*.json in path order."""
     files = [p for p in [REGISTRY_DIR / f"{name}.json"] if p.is_file()]
     folder = REGISTRY_DIR / name
     if folder.is_dir():
         files += sorted(folder.rglob("*.json"))
-    if not files:
+    if not files and required:
         errors.append(f"registry/{name}.json: not found")
     parts = []
     for path in files:
@@ -44,7 +44,7 @@ def registry_parts(name, errors):
     return parts
 
 
-def load_packs(sects_by_id, subjects, errors, notes):
+def load_packs(sects_by_id, subjects, glossary, errors, notes):
     packs, sect_ids = [], set(sects_by_id)
     for path in sorted(p for p in LANG_DIR.rglob("*") if p.is_file()):
         rel = path.relative_to(LANG_DIR).as_posix()
@@ -59,7 +59,7 @@ def load_packs(sects_by_id, subjects, errors, notes):
         except (OSError, ValueError) as exc:
             errors.append(f"lang/{rel}: {exc}")
             continue
-        problems = L.entry_problems(entries, sects_by_id, subjects)
+        problems = L.entry_problems(entries, sects_by_id, subjects, glossary)
         errors.extend(f"lang/{rel}: {p}" for p in problems)
         if not problems:
             packs.append(L.Pack(file=rel, sect=sect, meta=meta, entries=entries))
@@ -81,6 +81,7 @@ def build(write=True):
     errors, notes = [], []
     sect_parts = registry_parts("sects", errors)
     subject_parts = registry_parts("subjects", errors)
+    glossary_parts = registry_parts("glossary", errors, required=False)
     if errors:
         return fail(errors)
 
@@ -91,17 +92,19 @@ def build(write=True):
         else:
             errors.append(f"{label}: top level must be a list")
     subjects, merge_errors = L.merge_subjects(subject_parts)
-    errors += merge_errors
+    glossary, glossary_merge_errors = L.merge_glossary(glossary_parts)
+    errors += merge_errors + glossary_merge_errors
     if errors:
         return fail(errors)
 
     sects_by_id, sect_errors = L.validate_sects(sects)
     errors += sect_errors
     errors += L.validate_subjects(subjects, set(sects_by_id))
+    errors += L.validate_glossary(glossary, set(sects_by_id))
     if errors:
         return fail(errors)
 
-    packs = load_packs(sects_by_id, subjects, errors, notes)
+    packs = load_packs(sects_by_id, subjects, glossary, errors, notes)
     if errors:
         return fail(errors)
 
@@ -123,7 +126,8 @@ def build(write=True):
             "placeholders": sum(e["placeholder"] for e in entries),
         }
 
-    print(f"{len(packs)} pack(s), {len(all_keys)} distinct key(s), {len(sects)} sect(s), {len(subjects)} subject(s)\n")
+    print(f"{len(packs)} pack(s), {len(all_keys)} distinct key(s), {len(sects)} sect(s), "
+          f"{len(subjects)} subject(s), {len(glossary)} glossary term(s)\n")
     print(f"  {'audience':<13}{'own':>5}{'inherited':>11}{'common':>8}{'missing':>9}{'placeholders':>14}")
     for audience in audiences:
         s = stats[audience]
@@ -147,6 +151,7 @@ def build(write=True):
         "subjects": subjects,
         "audiences": stats,
     })
+    write_json(data_dir / "glossary.json", glossary)
     for audience, bundle in bundles.items():
         write_json(data_dir / f"{audience}.json", bundle)
     print(f"\nBuilt dist/ ({len(bundles)} audience bundles).")
